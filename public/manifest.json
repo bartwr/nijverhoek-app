@@ -1,0 +1,23 @@
+{
+  "short_name": "nijverhoek-app",
+  "name": "Nijverhoek app",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "background_color": "#000000",
+  "scope": "/",
+  "theme_color": "#FFFFFF"
+}
