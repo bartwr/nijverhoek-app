@@ -3,8 +3,7 @@ import React from 'react';
 export const App = ({
   children
 }) => (
-  <div>
-    <h1>Nijverhoek</h1>
+  <div className="max-w-2xl mx-auto">
     {children}
   </div>
 );
