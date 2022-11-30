@@ -1,6 +1,7 @@
 import React from 'react';
+import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
-import {Logo} from '../Logo/Logo.tsx';
+import {Logo} from '../Logo/Logo';
 
 export const LayoutWithLogo = ({
   children
@@ -13,7 +14,9 @@ export const LayoutWithLogo = ({
     <div>
       {children}
     </div>
-    <div>
+    <div onClick={() => {
+      FlowRouter.go('index');
+    }}>
       <Logo />
     </div>
   </div>
