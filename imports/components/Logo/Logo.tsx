@@ -29,9 +29,19 @@ export const Logo = ({
     }
   }, []);
 
+  const imagePath = getImage(theme || 'default');
+
   return <div>
     <picture className="text-center">
-      <img src={getImage(theme || 'default')} alt="Logo Nijverhoek" className="inline-block" />
+      <img
+         srcSet={`
+          ${imagePath.replace('.png', '@3x.png')} 3x,
+          ${imagePath.replace('.png', '@3x.png')} 2x,
+          ${imagePath} 1x
+        `}
+        src={imagePath}
+        alt="Logo Nijverhoek"
+        className="inline-block" />
     </picture>
   </div>
 
