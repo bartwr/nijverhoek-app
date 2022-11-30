@@ -32,7 +32,7 @@ export const LayoutWithLargeIcon = ({
   }} onClick={onClick}>
     <img
       src={iconPath}
-      className="block mx-auto"
+      className="block mx-auto rounded-full"
       style={{
         width: '246px',
         maxWidth: '60%'

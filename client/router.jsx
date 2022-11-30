@@ -41,7 +41,7 @@ FlowRouter.route('/sloop/checkout', {
   }
 });
 
-FlowRouter.route('/sloop/checkout-done', {
+FlowRouter.route('/sloop/checkout/done', {
   name: 'sloop-checkout-done',
   async action(params, queryParams) {
     const { CheckOutDone } = await import('/imports/components/CheckOut/CheckOutDone')
