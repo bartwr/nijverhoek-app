@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import moment from 'moment';
 
-import { Sessions } from '/imports/server/models/Sessions';
+import { Sessions } from '/imports/models/Sessions';
 
 Meteor.methods({
   // CHECK IN
@@ -44,7 +44,6 @@ Meteor.methods({
 
   // CHECK OUT
   'sessions.checkout': function({
-    user_id,
     memo,
     session_end
   }: {
@@ -77,5 +76,11 @@ Meteor.methods({
         session_end: session_end || moment().toISOString()
       }
     })
+  },
+
+  'sessions.getActive': function() {
+     return Sessions.find({
+       session_end: {$exists: false}
+     }).fetch();
   }
 })

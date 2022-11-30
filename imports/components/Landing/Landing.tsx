@@ -1,6 +1,12 @@
-import React from 'react';
+import { Meteor } from 'meteor/meteor';
+import { useTracker } from 'meteor/react-meteor-data';
+import React, {useEffect, useState} from 'react';
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
+// Models
+import { Sessions } from '/imports/models/Sessions';
+
+// Components
 import {Title} from '../Title/Title.tsx';
 import {Paragraph as P} from '../Paragraph/Paragraph';
 import {Select} from '../Form/Select.tsx';
@@ -28,8 +34,13 @@ const Household = ({children}: {
   );
 }
 
-export const Landing = () => (
-  <LayoutWithLogo>
+export const Landing = () => {
+  const activeSessions = useTracker(() => Sessions.find({
+    session_end: {$exists: false}
+  }).fetch(), []);
+  console.log('activeSessions', activeSessions)
+
+  return <LayoutWithLogo>
     <Title>
       Wie is er aanwezig?
     </Title>
@@ -42,12 +53,11 @@ export const Landing = () => (
       my-4
       flex justify-center flex-wrap
     ">
-      <Household>
-        1
-      </Household>
-      <Household>
-        2
-      </Household>
+      {activeSessions.map(x => {
+        return <Household key={x._id}>
+          {x.memo}
+        </Household>  
+      })}
     </div>
 
     <div className="
@@ -67,4 +77,4 @@ export const Landing = () => (
       </Button>
     </div>
   </LayoutWithLogo>
-);
+}

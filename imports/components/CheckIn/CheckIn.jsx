@@ -45,7 +45,7 @@ export const CheckIn = () => {
     </Title>
 
     <div className="my-8">
-      <Select name="houseNumber" id="houseNumber">
+      <Select name="houseNumber" id="houseNumber" defaultValue={localStorage.getItem('SLOOPHOEK__houseNumber')}>
         <option value=""></option>
         {Array.from(Array(32), (_, number) => <option value={number+1} key={number+1}>
           {number+1}
