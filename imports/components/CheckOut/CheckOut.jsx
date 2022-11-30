@@ -6,10 +6,10 @@ import {Select} from '../Form/Select.tsx';
 import {Button} from '../Button/Button.tsx';
 import {LayoutWithLogo} from '../LayoutWithLogo/LayoutWithLogo.tsx';
 
-export const CheckIn = () => (
+export const CheckOut = () => (
   <LayoutWithLogo>
     <Title>
-      Welkom in de Nijverhoek. In welk kavel ga je klussen?
+      Welk kavel ga je leeg achterlaten?
     </Title>
 
     <div className="my-8">
@@ -23,9 +23,9 @@ export const CheckIn = () => (
 
     <div className="my-4">
       <Button onClick={() => {
-        FlowRouter.go('sloop-checkin-done')
+        FlowRouter.go('sloop-checkout-done')
       }}>
-        Check in
+        Check out
       </Button>
     </div>
   </LayoutWithLogo>

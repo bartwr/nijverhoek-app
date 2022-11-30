@@ -1,4 +1,5 @@
 import React from 'react';
+import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
 import {Title} from '../Title/Title.tsx';
 import {Paragraph as P} from '../Paragraph/Paragraph';
@@ -49,5 +50,21 @@ export const Landing = () => (
       </Household>
     </div>
 
+    <div className="
+      my-4
+      flex
+      justify-around
+    ">
+      <Button onClick={() => {
+        FlowRouter.go('sloop-checkin')
+      }}>
+        Check in
+      </Button>
+      <Button onClick={() => {
+        FlowRouter.go('sloop-checkout')
+      }}>
+        Check out
+      </Button>
+    </div>
   </LayoutWithLogo>
 );

@@ -33,6 +33,22 @@ FlowRouter.route('/sloop/checkin/done', {
   }
 });
 
+FlowRouter.route('/sloop/checkout', {
+  name: 'sloop-checkout',
+  async action(params, queryParams) {
+    const { CheckOut } = await import('/imports/components/CheckOut/CheckOut.jsx')
+    renderApp(<CheckOut />);
+  }
+});
+
+FlowRouter.route('/sloop/checkout-done', {
+  name: 'sloop-checkout-done',
+  async action(params, queryParams) {
+    const { CheckOutDone } = await import('/imports/components/CheckOut/CheckOutDone')
+    renderApp(<CheckOutDone />);
+  }
+});
+
 // Create 404 route (catch-all)
 FlowRouter.route('*', {
   action() {

@@ -3,13 +3,13 @@ import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
 import {LayoutWithLargeIcon} from '../LayoutWithLargeIcon/LayoutWithLargeIcon';
 
-export const CheckInDone = () => (
+export const CheckOutDone = () => (
   <LayoutWithLargeIcon
-    iconPath="/images/icon/checkmark-white.svg"
-    backgroundColor="#9CC192"
+    iconPath="/images/components/CheckOutDone/jay-lock.png"
+    backgroundColor="#EA5C33"
     textColor="#fff"
-    title="Check in"
-    paragraphText="Succes met slopen!"
+    title="Check out"
+    paragraphText="Doe de deur op slot"
     onClick={() => {
       FlowRouter.go('index')
     }}
