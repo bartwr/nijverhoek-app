@@ -1,29 +1,29 @@
 {
-  "short_name": "nijverhoek-app",
+  "short_name": "Nijverhoek",
   "name": "Nijverhoek app",
   "start_url": "/",
   "display": "standalone",
   "icons": [
     {
-      "src": "/images/icons-512.png",
+      "src": "/images/icons-sloophoek-512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"
     },
     {
-      "src": "/images/icons-192.png",
+      "src": "/images/icons-sloophoek-192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "maskable"
     },
     {
-      "src": "/images/icons-512.png",
+      "src": "/images/icons-sloophoek-512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
     }
   ],
-  "background_color": "#000000",
+  "background_color": "#f85838",
   "scope": "/",
-  "theme_color": "#FFFFFF"
+  "theme_color": "#f85838"
 }
