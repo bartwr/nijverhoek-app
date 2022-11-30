@@ -1,11 +1,13 @@
 import React from 'react';
 
-export const Select = ({
+export const Select = ({name, children}: {
   name: string,
   children
 }) => (
   <div>
-    <select name={name} className="
+    <select
+      name={name}
+      className="
       text-xl
       p-2
     ">
