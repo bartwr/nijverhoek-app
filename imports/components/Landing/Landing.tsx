@@ -38,7 +38,6 @@ export const Landing = () => {
   const activeSessions = useTracker(() => Sessions.find({
     session_end: {$exists: false}
   }).fetch(), []);
-  console.log('activeSessions', activeSessions)
 
   return <LayoutWithLogo>
     <Title>

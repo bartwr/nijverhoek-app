@@ -67,7 +67,6 @@ Meteor.methods({
     }
 
     // Update session
-    console.log('activeSession._id', activeSession._id)
     return Sessions.update({
       _id: activeSession._id
     }, {

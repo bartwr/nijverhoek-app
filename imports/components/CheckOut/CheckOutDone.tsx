@@ -8,7 +8,7 @@ export const CheckOutDone = () => (
     iconPath="/images/components/CheckOutDone/jay-lock-square.gif"
     backgroundColor="#EA5C33"
     textColor="#fff"
-    title="Check out"
+    title="Check uit"
     paragraphText="Doe de deur op slot"
     onClick={() => {
       FlowRouter.go('index')
