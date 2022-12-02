@@ -53,11 +53,11 @@ export const Landing = () => {
         Wie is er aanwezig?
       </Title>
 
-      <div className="py-6">
+      {activeSessions && activeSessions.length > 0 && <div className="py-6">
         <P>
           In deze kavels zijn er mensen aan het slopen:
         </P>
-      </div>
+      </div>}
 
       <div className="
         flex justify-center flex-wrap
