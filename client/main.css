@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'PlutoSansBold';
+  src: url('/font/pluto_sans_w04_bold-webfont.woff2') format('woff2'),
+       url('/font/pluto_sans_w04_bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
 html,
 body,
 #react-target {
@@ -11,5 +19,5 @@ body,
 }
 
 body {
-  font-family: Pluto, sans-serif;
+  font-family: PlutoSansBold, sans-serif;
 }

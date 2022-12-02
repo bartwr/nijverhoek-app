@@ -7,7 +7,7 @@ export const LayoutWithLogo = ({
   children
 }) => (
   <div className="
-    text-center px-12 py-12
+    text-center p-12
     flex flex-col justify-between
     h-full
   ">
