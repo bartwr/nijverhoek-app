@@ -18,17 +18,6 @@ export const Logo = ({
   theme?: string,
   onClick?: Function
 }) => {
-  useEffect(() => {
-    const TO = setTimeout(() => {
-      FlowRouter.go('index')
-    }, 10000);
-
-    // Function that gets exectuted after unmount
-    return () => {
-      clearTimeout(TO);
-    }
-  }, []);
-
   const imagePath = getImage(theme || 'default');
 
   return <div>

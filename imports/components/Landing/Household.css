@@ -1,0 +1,26 @@
+.Household-tooltip {
+ left: 50%;
+ transform: translate(-50%, 0);
+}
+.Household-tooltip::after {
+   content: "";
+   position: absolute;/* To position the tooltip */
+   top: 100%;
+   left: 50%;
+   margin-left: -6px;
+
+   /* To add an arrow */
+   border: 6px solid;
+   border-color: #ea5c33 transparent transparent transparent;
+}
+
+.Household-input {
+   color: #fff;
+   background-color: #ea5c33;
+   transition: background-color 0.2s;
+}
+.Household-input:focus {
+   outline:none;
+   background-color: #fff;
+   color: #ea5c33;
+}

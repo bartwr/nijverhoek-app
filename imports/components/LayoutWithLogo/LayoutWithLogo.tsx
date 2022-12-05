@@ -3,6 +3,8 @@ import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
 import {Logo} from '../Logo/Logo';
 
+const houseNumber = localStorage.getItem('SLOOPHOEK__houseNumber');
+
 export const LayoutWithLogo = ({
   children
 }) => (

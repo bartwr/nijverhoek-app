@@ -1,6 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 import moment from 'moment';
 
+import './households';
+
 import { Sessions } from '/imports/models/Sessions';
 
 Meteor.methods({
@@ -12,7 +14,7 @@ Meteor.methods({
     number_of_visitors
   }: {
     user_id: string,
-    memo: string,
+    memo: number,
     session_start?: any,
     number_of_visitors?: number
   }) {
@@ -47,7 +49,7 @@ Meteor.methods({
     memo,
     session_end
   }: {
-    memo: string,
+    memo: number,
     session_end?: any
   }) {
     const houseNumber = memo;

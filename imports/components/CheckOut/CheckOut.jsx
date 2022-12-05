@@ -20,7 +20,7 @@ export const CheckOut = () => {
 
     // Check out
     Meteor.call('sessions.checkout', {
-      memo: houseNumber,
+      memo: Number(houseNumber),
       session_end: null
     }, (err, res) => {
       console.log(err, res);

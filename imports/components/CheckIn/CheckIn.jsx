@@ -6,6 +6,30 @@ import {Select} from '../Form/Select.tsx';
 import {Button} from '../Button/Button.tsx';
 import {LayoutWithLogo} from '../LayoutWithLogo/LayoutWithLogo.tsx';
 
+const getCheckInCount = (houseNumber) => {
+  const LS_houseNumberCheckInCounters = localStorage.getItem('SLOOPHOEK__houseNumberCheckInCounters');
+  if(LS_houseNumberCheckInCounters) {
+    const houseNumberCheckInCounters = JSON.parse(LS_houseNumberCheckInCounters);
+    return houseNumberCheckInCounters[houseNumber];
+  } else {
+    return 0;
+  }
+}
+
+const incrementCheckInCount = (houseNumber) => {
+  const LS_houseNumberCheckInCounters = localStorage.getItem('SLOOPHOEK__houseNumberCheckInCounters');
+  let houseNumberCheckInCounters = [];
+
+  if(LS_houseNumberCheckInCounters) {
+    houseNumberCheckInCounters = JSON.parse(LS_houseNumberCheckInCounters);
+    const checkInCount = getCheckInCount(houseNumber);
+    houseNumberCheckInCounters[houseNumber] = checkInCount ? checkInCount + 1 : 1;
+  } else {
+    houseNumberCheckInCounters[houseNumber] = 1;
+  }
+  localStorage.setItem('SLOOPHOEK__houseNumberCheckInCounters', JSON.stringify(houseNumberCheckInCounters));
+}
+
 export const CheckIn = () => {
   const checkIn = () => {
     // Check if houseNumber was selected
@@ -18,10 +42,13 @@ export const CheckIn = () => {
     // Store number in localStorage
     localStorage.setItem('SLOOPHOEK__houseNumber', houseNumber);
 
+    // Count how many times this houseNumber did checkIn, so we can give more features if user logged in more often
+    incrementCheckInCount(houseNumber);
+
     // Check in
     Meteor.call('sessions.checkin', {
       user_id: localStorage.getItem('SLOOPHOEK__uuid'),
-      memo: houseNumber,
+      memo: Number(houseNumber),
       session_start: null,
       number_of_visitors: null
     }, (err, res) => {

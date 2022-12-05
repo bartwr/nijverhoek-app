@@ -10,6 +10,10 @@
   font-style: normal;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body,
 #react-target {

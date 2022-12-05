@@ -1,15 +1,12 @@
 import { Mongo } from 'meteor/mongo';
 // import SimpleSchema from 'simpl-schema';
 
-const Sessions = new Mongo.Collection('Sessions')
+const Households = new Mongo.Collection('Households')
 
 // _id: MongoID
 // dt_created: datetime
-// user_id: string
-// memo: number
-// session_start: datetime
-// session_end: datetime
-// number_of_visitors: integer
+// household_number: number
+// name: string
 
 // const schema = new SimpleSchema({
 //   var: {
@@ -18,4 +15,4 @@ const Sessions = new Mongo.Collection('Sessions')
 //   }
 // })
 
-export {Sessions}
+export {Households}
