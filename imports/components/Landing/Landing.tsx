@@ -32,7 +32,7 @@ const Household = ({children}: {
   const [didClickSelf, setDidClickSelf] = useState(false);
   const [inputValue, setInputValue] = useState('');
 
-  let TO_didClick;
+  let TO_didClick, TO_didUpdate;
 
   const isSelf = Number(children) == Number(houseNumber);
   const isAllowedToViewNames = houseNumberCheckInCounters[houseNumber] && houseNumberCheckInCounters[houseNumber] >= 5;
@@ -58,6 +58,17 @@ const Household = ({children}: {
     householdName
   ])
 
+  const updateInput = (e) => {
+    setInputValue(e.target.value);
+  }
+
+  const blurInput = (e) => {
+    Meteor.call('households.updateName', {
+      household_number: houseNumber,
+      name: e.target.value
+    })
+  }
+
   return (
     <div className="relative">
 
@@ -75,20 +86,14 @@ const Household = ({children}: {
         font-bold
         text-xl
         text-white
-        w-56
+        w-52
       " style={{
         background: '#ea5c33',
       }} onSubmit={(e) => {
         e.preventDefault();
         setDidClickSelf(false);
       }}>
-        <input type="text" className="Household-input w-full h-full px-2 text-center rounded-lg" value={inputValue} onChange={(e) => {
-          setInputValue(e.target.value);
-          Meteor.call('households.updateName', {
-            household_number: houseNumber,
-            name: e.target.value
-          })
-        }}/>
+        <input type="text" className="Household-input w-full h-full px-2 text-center rounded-lg" value={inputValue} onChange={updateInput} onBlur={blurInput} />
       </form>}
 
       {didClick && householdName && isAllowedToViewNames && <div className="
@@ -140,6 +145,16 @@ const Household = ({children}: {
 
         setDidClick(! didClick);
       }}>
+        {isAllowedToViewNames && isSelf && (! householdName || householdName === '') && <div className="
+          absolute
+          top-0
+          right-0
+
+          rounded-full
+          w-2
+          h-2
+        " style={{background: '#f85838'}} />}
+
         {children}
       </div>
 
