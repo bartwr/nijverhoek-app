@@ -47,7 +47,7 @@ export const ContainerPickup = () => {
 
   return <LayoutWithLogo>
     <div className="fixed z-1 top-0 left-0 bottom-0 left-0 w-full overflow-x-auto">
-      <img src="/images/components/ContainerPickup/map.png" alt="Container map"
+      <img src="/images/components/ContainerPickup/map.png?2" alt="Container map"
         className="ContainerPickup-map block"
         style={{
           width: 'auto',
@@ -102,3 +102,4 @@ export const ContainerPickup = () => {
     </div>
   </LayoutWithLogo>
 }
+z6
