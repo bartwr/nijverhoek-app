@@ -16,7 +16,7 @@ export const LayoutWithLogo = ({
     <div>
       {children}
     </div>
-    <div onClick={() => {
+    <div className="pb-8 relative z-20" onClick={() => {
       FlowRouter.go('index');
     }}>
       <Logo />

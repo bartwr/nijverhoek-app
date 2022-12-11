@@ -3,8 +3,9 @@ import { motion } from "framer-motion"
 
 import './Button.css';
 
-export const Button = ({onClick, children}: {
+export const Button = ({onClick, id, children}: {
   onClick?: Function,
+  id?: string,
   children: any
 }) => (
   <div>
@@ -17,6 +18,7 @@ export const Button = ({onClick, children}: {
         text-xl
         p-2
       "
+      id={id}
       onClick={onClick}
      >
       {children}

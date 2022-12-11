@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import moment from 'moment';
 
 import './households';
+import './containers';
 
 import { Sessions } from '/imports/models/Sessions';
 

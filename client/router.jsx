@@ -49,6 +49,14 @@ FlowRouter.route('/sloop/checkout/done', {
   }
 });
 
+FlowRouter.route('/sloop/container-pickup', {
+  name: 'sloop-container-pickup',
+  async action(params, queryParams) {
+    const { ContainerPickup } = await import('/imports/components/ContainerPickup/ContainerPickup')
+    renderApp(<ContainerPickup />);
+  }
+});
+
 // Create 404 route (catch-all)
 FlowRouter.route('*', {
   action() {

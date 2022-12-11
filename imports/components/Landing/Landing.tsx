@@ -173,6 +173,7 @@ export const Landing = () => {
 
   return <LayoutWithLogo>
     <div className="flex flex-col justify-between">
+
       <Title>
         Wie is er aanwezig?
       </Title>
@@ -210,5 +211,16 @@ export const Landing = () => {
         </Button>
        </div>
     </div>
+
+    <div className="my-4 mb-8">
+      <Title>
+        Container vol?
+      </Title>
+
+      <div onClick={() => FlowRouter.go('sloop-container-pickup')}>
+        <img src="/images/components/ContainerPickup/container-pickup.jpg" alt="Pickup container" />
+      </div>
+    </div>
+
   </LayoutWithLogo>
 }
