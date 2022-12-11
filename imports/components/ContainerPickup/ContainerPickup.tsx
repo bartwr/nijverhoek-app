@@ -69,6 +69,10 @@ export const ContainerPickup = () => {
       <Title>
         Containers
       </Title>
+      <p>
+        worden elke werkdag geleegd
+      </p>
+
 
       <div className="my-8 flex flex justify-around">
         <div>
@@ -95,6 +99,7 @@ export const ContainerPickup = () => {
           Geef door
         </Button>
       </div>
+
     </div>
   </LayoutWithLogo>
 }

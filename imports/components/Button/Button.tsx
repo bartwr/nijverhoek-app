@@ -17,6 +17,7 @@ export const Button = ({onClick, id, children}: {
         btn-blue
         text-xl
         p-2
+        drop-shadow-
       "
       id={id}
       onClick={onClick}
