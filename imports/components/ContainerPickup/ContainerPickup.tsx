@@ -17,9 +17,8 @@ export const ContainerPickup = () => {
     }
 
     const houseNumber = localStorage.getItem('SLOOPHOEK__houseNumber');
-    if(! houseNumber) return;
 
-    const submittedByHouseNumber = parseInt(houseNumber);
+    const submittedByHouseNumber = houseNumber ? parseInt(houseNumber) : undefined;
     const containerNumber = document.getElementById('js-containerNumber').value;
     const status = document.getElementById('js-status').value;
 
@@ -77,7 +76,7 @@ export const ContainerPickup = () => {
       <div className="my-8 flex flex justify-around">
         <div>
           Container<br /><br />
-          <Select name="containerNumber" id="js-containerNumber" defaultValue={localStorage.getItem('SLOOPHOEK__houseNumber')}>
+          <Select name="containerNumber" id="js-containerNumber">
             <option value="">#</option>
             {Array.from(Array(12), (_, number) => <option value={number+1} key={number+1}>
               {number+1}
@@ -86,10 +85,10 @@ export const ContainerPickup = () => {
         </div>
         <div>
           is<br /><br />
-          <Select name="status" id="js-status" defaultValue={localStorage.getItem('SLOOPHOEK__houseNumber')}>
-            <option value="">vol</option>
-            <option value="">halfvol</option>
-            <option value="">leeg</option>
+          <Select name="status" id="js-status">
+            <option value="vol">vol</option>
+            <option value="halfvol">halfvol</option>
+            <option value="leeg">leeg</option>
           </Select>
         </div>
       </div>

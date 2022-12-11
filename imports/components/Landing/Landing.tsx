@@ -218,7 +218,7 @@ export const Landing = () => {
       </Title>
 
       <div onClick={() => FlowRouter.go('sloop-container-pickup')}>
-        <img src="/images/components/ContainerPickup/container-pickup.jpg" alt="Pickup container" />
+        <img src="/images/components/ContainerPickup/container-pickup.jpg" alt="Pickup container" className="cursor-pointer" />
       </div>
     </div>
 
