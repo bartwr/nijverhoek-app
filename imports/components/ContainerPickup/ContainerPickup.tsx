@@ -102,4 +102,3 @@ export const ContainerPickup = () => {
     </div>
   </LayoutWithLogo>
 }
-z6
