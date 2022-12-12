@@ -103,8 +103,9 @@ export const ContainerEdit = ({
         </div>
         <div>
           is<br /><br />
-          <Select name="status" id="js-status" style={{textAlign: 'center'}}>
+          <Select name="status" id="js-status" style={{textAlign: 'left'}}>
             <option value="vol">vol</option>
+            <option value="doorgegeven-aan-renewi">gemeld aan Renewi</option>
             <option value="halfvol">halfvol</option>
             <option value="leeg">leeg</option>
           </Select>

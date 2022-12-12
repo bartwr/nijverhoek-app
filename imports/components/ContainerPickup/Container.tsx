@@ -41,6 +41,9 @@ export const Container = ({
   else if(containerStatus && containerStatus.status === 'leeg') {
     fillColor = '#4dff00';
   }
+  else if(containerStatus && containerStatus.status === 'doorgegeven-aan-renewi') {
+    fillColor = '#4300ff';
+  }
   // console.log('containerStatus', containerStatus)
 
   const getIcon = (containerType) => {

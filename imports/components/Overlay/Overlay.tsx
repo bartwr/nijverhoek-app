@@ -20,6 +20,7 @@ export const Overlay = ({
       left-0
       bottom-0
       p-10
+      px-6
     "
     style={{
       zIndex: 20
