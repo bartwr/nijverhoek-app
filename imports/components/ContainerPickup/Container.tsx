@@ -41,7 +41,7 @@ export const Container = ({
   else if(containerStatus && containerStatus.status === 'leeg') {
     fillColor = '#4dff00';
   }
-  console.log('containerStatus', containerStatus)
+  // console.log('containerStatus', containerStatus)
 
   const getIcon = (containerType) => {
     if(containerType === 'bouw-en-sloop') {
@@ -54,7 +54,7 @@ export const Container = ({
 
   return (
     <div className="relative">
-      {containerStatus && containerStatus.containerType && <div className="absolute top-0 right-0 bottom-0 left-0 flex flex-col justify-center text-base lg:text-xl xl:text-4xl">
+      {containerStatus && containerStatus.containerType && <div className="absolute top-0 right-0 bottom-0 left-0 flex flex-col justify-center text-base lg:text-xl xl:text-2xl">
         {getIcon(containerStatus.containerType)}
       </div>}
       <motion.svg

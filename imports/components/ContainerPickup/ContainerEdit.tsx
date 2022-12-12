@@ -1,8 +1,9 @@
 import { Meteor } from 'meteor/meteor';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion"
 import { useTracker } from 'meteor/react-meteor-data';
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
+import moment from 'moment';
 
 import {Overlay} from '../Overlay/Overlay.tsx';
 import {Select} from '../Form/Select.tsx';
@@ -17,6 +18,16 @@ export const ContainerEdit = ({
   containerPositionNumber: number,
   onClose?: Function
 }) => {
+
+  const [containerStatus, setContainerStatus] = useState();
+  const [timeoutDone, setTimeoutDone] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimeoutDone(true);
+    }, 500)
+  })
+
   // On load
   useEffect(() => {
     Meteor.call('containers.getContainerStatus', containerPositionNumber, (err, res) => {
@@ -32,6 +43,8 @@ export const ContainerEdit = ({
       document.getElementById('js-containerNumber').value = res.containerNumber;
       document.getElementById('js-status').value = res.status;
       document.getElementById('js-containerType').value = res.containerType;
+      // Store status in state
+      setContainerStatus(res)
     })
   }, [])
 
@@ -74,6 +87,10 @@ export const ContainerEdit = ({
       title="Container status"
       onClose={onClose}
     >
+      <p className="text-gray-300">
+        {containerStatus ? moment(containerStatus.dt_created).format('DD MMM . HH:mm') : ''}&nbsp;
+      </p>
+      
       <div className="my-8 flex flex justify-around">
         <div>
           Container<br /><br />

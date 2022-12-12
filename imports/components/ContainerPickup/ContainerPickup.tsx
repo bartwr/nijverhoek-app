@@ -160,9 +160,6 @@ export const ContainerPickup = () => {
       <Title>
         Containers
       </Title>
-      <p>
-        worden elke werkdag geleegd
-      </p>
 
     </div>
   </LayoutWithLogo>
