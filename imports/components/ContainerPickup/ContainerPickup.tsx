@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import React, { useEffect, useState } from 'react';
+import { motion } from "framer-motion"
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
 import {Title} from '../Title/Title.tsx';
@@ -28,7 +29,7 @@ export const ContainerPickup = () => {
   },
   {
     containerPositionNumber: 3,
-    left: '22%'
+    left: '22.7%'
   },
   // {
   //   containerPositionNumber: 4,
@@ -117,21 +118,24 @@ export const ContainerPickup = () => {
           height: '100%',
         }}>
         {containerPositions.map((x) => {
-          return <div key={x.containerPositionNumber} style={{
+          return <motion.div key={x.containerPositionNumber} style={{
             position: 'absolute',
             left: x.left,
             top: x.top || '59%',
             width: '12vh',
           }}
+          className="cursor-pointer"
           onClick={() => {
             onContainerClick(x.containerPositionNumber)
           }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           >
             <Container
               containerPositionNumber={x.containerPositionNumber}
               rotate={x.rotate}
             />
-          </div>
+          </motion.div>
         })}
         <img src="/images/components/ContainerPickup/map.png?3" alt="Container map"
           className="ContainerPickup-map block"

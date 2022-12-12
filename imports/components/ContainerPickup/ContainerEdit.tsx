@@ -24,7 +24,11 @@ export const ContainerEdit = ({
         console.error(err);
         return;
       }
-      // console.log(res);
+      // No container status found:
+      if(res === undefined) {
+        return;
+      }
+      // Did find container status:
       document.getElementById('js-containerNumber').value = res.containerNumber;
       document.getElementById('js-status').value = res.status;
       document.getElementById('js-containerType').value = res.containerType;
