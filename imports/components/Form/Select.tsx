@@ -1,11 +1,12 @@
 import React from 'react';
 
 export const Select = ({
-  name, id, defaultValue, children
+  name, id, defaultValue, style, children
 }: {
   name: string,
   id?: string,
-  defaultValue?: any
+  defaultValue?: any,
+  style?: object
   children
 }) => (
   <div>
@@ -16,7 +17,9 @@ export const Select = ({
         p-2
       "
       defaultValue={defaultValue}
-      id={id}>
+      style={style}
+      id={id}
+     >
       {children}
     </select>
   </div>
