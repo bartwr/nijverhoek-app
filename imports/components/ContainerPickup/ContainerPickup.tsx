@@ -17,45 +17,85 @@ export const ContainerPickup = () => {
     setClickedPositionNumber(containerPositionNumber);
   }
 
-  const containerPositions = [{
-    containerPositionNumber: 1,
-    left: '15%'
-  }, {
+  const containerPositions = [
+  // {
+  //   containerPositionNumber: 1,
+  //   left: '12%'
+  // },
+  {
     containerPositionNumber: 2,
-    left: '22%'
-  }, {
+    left: '15%'
+  },
+  {
     containerPositionNumber: 3,
-    left: '25%'
-  }, {
-    containerPositionNumber: 4,
-    left: '40%'
-  }, {
-    containerPositionNumber: 5,
-    left: '43%'
-  }, {
+    left: '22%'
+  },
+  // {
+  //   containerPositionNumber: 4,
+  //   left: '24.5%'
+  // },
+  // {
+  //   containerPositionNumber: 5,
+  //   left: '30.2%'
+  // },
+  {
     containerPositionNumber: 6,
-    left: '50%'
-  }, {
-    containerPositionNumber: 7,
-    left: '61%'
-  }, {
+    left: '33%'
+  },
+  // {
+  //   containerPositionNumber: 7,
+  //   left: '40%'
+  // },
+  {
     containerPositionNumber: 8,
-    left: '67.9%'
-  }, {
+    left: '43%'
+  },
+  {
     containerPositionNumber: 9,
+    left: '50%'
+  },
+  // {
+  //   containerPositionNumber: 10,
+  //   left: '53%'
+  // },
+  // {
+  //   containerPositionNumber: 11,
+  //   left: '59%'
+  // },
+  {
+    containerPositionNumber: 12,
+    left: '62%'
+  },
+  {
+    containerPositionNumber: 13,
+    left: '67.9%'
+  },
+  {
+    containerPositionNumber: 14,
     left: '70.5%'
-  }, {
-    containerPositionNumber: 10,
+  },
+  // {
+  //   containerPositionNumber: 15,
+  //   left: '76.5%'
+  // },
+  // {
+  //   containerPositionNumber: 16,
+  //   left: '79.3%'
+  // },
+  {
+    containerPositionNumber: 17,
     left: '91%',
     top: '30%',
     rotate: '67deg',
-  }, {
-    containerPositionNumber: 11,
+  },
+  {
+    containerPositionNumber: 18,
     left: '87%',
     top: '25%',
     rotate: '67deg',
-  }, {
-    containerPositionNumber: 12,
+  },
+  {
+    containerPositionNumber: 19,
     left: '83%',
     top: '20%',
     rotate: '67deg',
