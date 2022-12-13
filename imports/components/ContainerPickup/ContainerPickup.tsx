@@ -19,34 +19,34 @@ export const ContainerPickup = () => {
   }
 
   const containerPositions = [
-  // {
-  //   containerPositionNumber: 1,
-  //   left: '12%'
-  // },
+  {
+    containerPositionNumber: 1,
+    left: '12%'
+  },
   {
     containerPositionNumber: 2,
     left: '15%'
   },
   {
     containerPositionNumber: 3,
-    left: '22.7%'
+    left: '22%'
   },
-  // {
-  //   containerPositionNumber: 4,
-  //   left: '24.5%'
-  // },
-  // {
-  //   containerPositionNumber: 5,
-  //   left: '30.2%'
-  // },
+  {
+    containerPositionNumber: 4,
+    left: '24.5%'
+  },
+  {
+    containerPositionNumber: 5,
+    left: '30.2%'
+  },
   {
     containerPositionNumber: 6,
     left: '33%'
   },
-  // {
-  //   containerPositionNumber: 7,
-  //   left: '40%'
-  // },
+  {
+    containerPositionNumber: 7,
+    left: '40%'
+  },
   {
     containerPositionNumber: 8,
     left: '43%'
@@ -55,14 +55,14 @@ export const ContainerPickup = () => {
     containerPositionNumber: 9,
     left: '50%'
   },
-  // {
-  //   containerPositionNumber: 10,
-  //   left: '53%'
-  // },
-  // {
-  //   containerPositionNumber: 11,
-  //   left: '59%'
-  // },
+  {
+    containerPositionNumber: 10,
+    left: '53%'
+  },
+  {
+    containerPositionNumber: 11,
+    left: '59%'
+  },
   {
     containerPositionNumber: 12,
     left: '62%'
@@ -75,14 +75,14 @@ export const ContainerPickup = () => {
     containerPositionNumber: 14,
     left: '70.5%'
   },
-  // {
-  //   containerPositionNumber: 15,
-  //   left: '76.5%'
-  // },
-  // {
-  //   containerPositionNumber: 16,
-  //   left: '79.3%'
-  // },
+  {
+    containerPositionNumber: 15,
+    left: '76.5%'
+  },
+  {
+    containerPositionNumber: 16,
+    left: '79.3%'
+  },
   {
     containerPositionNumber: 17,
     left: '91%',
