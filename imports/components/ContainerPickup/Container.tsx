@@ -46,7 +46,7 @@ export const Container = ({
   }
   else if(containerStatus && containerStatus.status === 'weggehaald') {
     fillColor = '#eee';
-    opacity = 0.2;
+    opacity = 0.1;
   }
   // console.log('containerStatus', containerStatus)
 
