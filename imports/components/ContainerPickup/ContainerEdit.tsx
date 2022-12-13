@@ -59,7 +59,7 @@ export const ContainerEdit = ({
 
     const submittedByHouseNumber = houseNumber ? parseInt(houseNumber) : undefined;
     const containerNumber = document.getElementById('js-containerNumber').value;
-    const containerType = document.getElementById('js-containerType').value;
+    let containerType = document.getElementById('js-containerType').value;
     const status = document.getElementById('js-status').value;
 
     // Say Thanks!
@@ -69,6 +69,11 @@ export const ContainerEdit = ({
     setTimeout(() => {
       onClose()
     }, 250)
+
+    // Make containerType unknown if 'weggehaald' 
+    if(status === 'weggehaald') {
+      containerType = '';
+    }
 
     Meteor.call('containers.addStatus', {
       submittedByHouseNumber: submittedByHouseNumber,
@@ -108,6 +113,7 @@ export const ContainerEdit = ({
             <option value="doorgegeven-aan-renewi">gemeld aan Renewi</option>
             <option value="halfvol">halfvol</option>
             <option value="leeg">leeg</option>
+            <option value="weggehaald">weggehaald</option>
           </Select>
         </div>
       </div>

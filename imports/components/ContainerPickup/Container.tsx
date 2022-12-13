@@ -31,7 +31,7 @@ export const Container = ({
     }
   }, []);
 
-  let fillColor = '#ccc';
+  let fillColor = '#ccc', opacity = 1;
   if(containerStatus && containerStatus.status === 'vol') {
     fillColor = '#f01301';
   }
@@ -43,6 +43,10 @@ export const Container = ({
   }
   else if(containerStatus && containerStatus.status === 'doorgegeven-aan-renewi') {
     fillColor = '#4300ff';
+  }
+  else if(containerStatus && containerStatus.status === 'weggehaald') {
+    fillColor = '#eee';
+    opacity = 0.2;
   }
   // console.log('containerStatus', containerStatus)
 
@@ -61,7 +65,7 @@ export const Container = ({
         {getIcon(containerStatus.containerType)}
       </div>}
       <motion.svg
-        animate={{ opacity: 1 }}
+        animate={{ opacity: opacity }}
         transition={{ delay: 0.8 }}
         viewBox="0 0 180 180"
         xmlns="<http://www.w3.org/2000/svg>"
