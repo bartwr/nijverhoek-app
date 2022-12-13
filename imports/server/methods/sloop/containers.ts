@@ -10,12 +10,14 @@ Meteor.methods({
     containerPositionNumber,
     containerNumber,
     containerType,
+    containerSize,
     status
   }: {
     submittedByHouseNumber?: number,
     containerPositionNumber: number,
     containerNumber?: number,
     containerType?: number,
+    containerSize?: number,
     status: string
   }) {
     // Insert entry
@@ -25,6 +27,7 @@ Meteor.methods({
       containerPositionNumber: containerPositionNumber,
       containerNumber: containerNumber,
       containerType: containerType,
+      containerSize: containerSize,
       status: status
     })
   },

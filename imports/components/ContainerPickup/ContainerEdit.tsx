@@ -43,6 +43,7 @@ export const ContainerEdit = ({
       document.getElementById('js-containerNumber').value = res.containerNumber;
       document.getElementById('js-status').value = res.status;
       document.getElementById('js-containerType').value = res.containerType;
+      document.getElementById('js-containerSize').value = res.containerSize;
       // Store status in state
       setContainerStatus(res)
     })
@@ -60,6 +61,7 @@ export const ContainerEdit = ({
     const submittedByHouseNumber = houseNumber ? parseInt(houseNumber) : undefined;
     const containerNumber = document.getElementById('js-containerNumber').value;
     let containerType = document.getElementById('js-containerType').value;
+    let containerSize = document.getElementById('js-containerSize').value;
     const status = document.getElementById('js-status').value;
 
     // Say Thanks!
@@ -80,6 +82,7 @@ export const ContainerEdit = ({
       containerPositionNumber: containerPositionNumber,
       containerNumber: containerNumber ? parseInt(containerNumber) : undefined,
       containerType: containerType,
+      containerSize: containerSize ? parseInt(containerSize) : undefined,
       status: status
     }, (err, res) => {
         if(err) return;
@@ -93,7 +96,7 @@ export const ContainerEdit = ({
       onClose={onClose}
     >
       <p className="text-gray-300">
-        {containerStatus ? moment(containerStatus.dt_created).format('DD MMM . HH:mm') : ''}&nbsp;
+        {containerStatus ? 'Laatste update: ' + moment(containerStatus.dt_created).format('DD MMM, HH:mm') : ''}&nbsp;
       </p>
       
       <div className="my-8 flex flex justify-around">
@@ -110,7 +113,7 @@ export const ContainerEdit = ({
           is<br /><br />
           <Select name="status" id="js-status" style={{textAlign: 'left'}}>
             <option value="vol">vol</option>
-            <option value="doorgegeven-aan-renewi">gemeld aan Renewi</option>
+            <option value="doorgegeven-aan-renewi">vol (doorgegeven)</option>
             <option value="halfvol">halfvol</option>
             <option value="leeg">leeg</option>
             <option value="weggehaald">weggehaald</option>
@@ -118,13 +121,23 @@ export const ContainerEdit = ({
         </div>
       </div>
 
-      <div className="my-8">
-        containertype is<br /><br />
-        <Select name="containerType" id="js-containerType" style={{textAlign: 'center'}}>
-          <option value="">?</option>
-          <option value="bouw-en-sloop">Bouw & Sloopafval</option>
-          <option value="houtafval-b">Houtafval B-kwaliteit</option>
-        </Select>
+      <div className="my-8 flex flex justify-around">
+        <div>
+          van type<br /><br />
+          <Select name="containerType" id="js-containerType" style={{textAlign: 'center'}}>
+            <option value="">?</option>
+            <option value="bouw-en-sloop">Bouw&Sloop</option>
+            <option value="houtafval-b">Houtafval</option>
+          </Select>
+        </div>
+        <div>
+          en grootte<br /><br />
+          <Select name="containerSize" id="js-containerSize" style={{textAlign: 'center'}}>
+            <option value="">?</option>
+            <option value={20}>20 m3</option>
+            <option value={40}>40 m3</option>
+          </Select>
+        </div>
       </div>
 
       <div className="my-4">

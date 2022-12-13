@@ -33,11 +33,11 @@ export const ContainerPickup = () => {
   const containerPositions = [
   {
     containerPositionNumber: 1,
-    left: '12%'
+    left: '12.5%'
   },
   {
     containerPositionNumber: 2,
-    left: '15%'
+    left: '15.5%'
   },
   {
     containerPositionNumber: 3,
@@ -45,7 +45,7 @@ export const ContainerPickup = () => {
   },
   {
     containerPositionNumber: 4,
-    left: '24.5%'
+    left: '24.8%'
   },
   {
     containerPositionNumber: 5,
@@ -53,7 +53,7 @@ export const ContainerPickup = () => {
   },
   {
     containerPositionNumber: 6,
-    left: '33%'
+    left: '33.2%'
   },
   {
     containerPositionNumber: 7,
@@ -85,7 +85,7 @@ export const ContainerPickup = () => {
   },
   {
     containerPositionNumber: 14,
-    left: '70.5%'
+    left: '70.8%'
   },
   {
     containerPositionNumber: 15,

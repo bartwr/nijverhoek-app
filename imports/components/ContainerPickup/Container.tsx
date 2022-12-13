@@ -9,11 +9,13 @@ import { Containers } from '/imports/models/Containers';
 export const Container = ({
   style,
   rotate,
-  containerPositionNumber
+  containerPositionNumber,
+  containerSize
  }: {
   style: object,
   rotate?: string,
-  containerPositionNumber: number
+  containerPositionNumber: number,
+  containerSize?: number
 }) => {
   // Keep track of users household name
   const { containerStatus, isLoading } = useTracker(() => {
@@ -61,7 +63,10 @@ export const Container = ({
 
   return (
     <div className="relative">
-      {containerStatus && containerStatus.containerType && <div className="absolute top-0 right-0 bottom-0 left-0 flex flex-col justify-center text-base lg:text-xl xl:text-2xl">
+      {containerStatus && containerStatus.containerType && <div className={`
+        absolute top-0 right-0 bottom-0 left-0 flex flex-col text-center justify-center text-base lg:text-xl xl:text-2xl
+        ${containerStatus.containerSize != 40 ? '-ml-2' : ''}
+      `}>
         {getIcon(containerStatus.containerType)}
       </div>}
       <motion.svg
@@ -76,12 +81,12 @@ export const Container = ({
           y="20"
           rx="20"
           ry="20"
-          width="70"
+          width={(containerStatus && containerStatus.containerSize) == 40 ? 80 : 60}
           height="150"
           style={{
             fill: fillColor,
             stroke:'black',
-            strokeWidth: 15,
+            strokeWidth: (containerStatus && containerStatus.containerSize) == 40 ? 15 : 10,
             opacity: 0.8,
             transformBox: 'fill-box',
             transformOrigin: 'center',
