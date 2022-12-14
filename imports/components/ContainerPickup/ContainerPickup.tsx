@@ -17,13 +17,20 @@ export const ContainerPickup = () => {
   // Position containers well for Firefox, as Firefox does something
   // strange with when using `width: max-content`
   useEffect(() => {
-    const imgObject = new Image();
-    const imageElement = document.getElementById('js-ContainerPickup-map');
-    imgObject.onload = function() {
-      const imageWidth = imageElement.width;
-      imageElement.style.width = `${imageWidth}px`;
+    const setWidthForImage = () => {
+      const imgObject = new Image();
+      const imageElement = document.getElementById('js-ContainerPickup-map');
+      imageElement.style.width = `auto`;
+      imgObject.onload = function() {
+        const imageWidth = imageElement.width;
+        imageElement.style.width = `${imageWidth}px`;
+      }
+      imgObject.src = imageElement.src;
     }
-    imgObject.src = imageElement.src;
+
+    window.addEventListener('resize', function () {
+      setWidthForImage();
+    })
   }, [])
 
   const onContainerClick = (containerPositionNumber: number) => {
@@ -31,6 +38,10 @@ export const ContainerPickup = () => {
   }
 
   const containerPositions = [
+  {
+    containerPositionNumber: 20,
+    left: '9%'
+  },
   {
     containerPositionNumber: 1,
     left: '12.5%'
