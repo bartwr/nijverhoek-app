@@ -40,7 +40,8 @@ export const ContainerPickup = () => {
   const containerPositions = [
   {
     containerPositionNumber: 20,
-    left: '9%'
+    left: '6%',
+    rotate: '-18deg'
   },
   {
     containerPositionNumber: 1,
@@ -62,10 +63,10 @@ export const ContainerPickup = () => {
     containerPositionNumber: 5,
     left: '30.2%'
   },
-  {
-    containerPositionNumber: 6,
-    left: '33.2%'
-  },
+  // {
+  //   containerPositionNumber: 6,
+  //   left: '33.2%'
+  // },
   {
     containerPositionNumber: 7,
     left: '40%'
@@ -100,11 +101,19 @@ export const ContainerPickup = () => {
   },
   {
     containerPositionNumber: 15,
-    left: '76.5%'
+    left: '78%'
+  },
+  // {
+  //   containerPositionNumber: 16,
+  //   left: '79.3%'
+  // },
+  {
+    containerPositionNumber: 21,
+    left: '88%'
   },
   {
-    containerPositionNumber: 16,
-    left: '79.3%'
+    containerPositionNumber: 22,
+    left: '91%'
   },
   {
     containerPositionNumber: 17,
