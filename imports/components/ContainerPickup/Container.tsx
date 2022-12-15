@@ -10,12 +10,14 @@ export const Container = ({
   style,
   rotate,
   containerPositionNumber,
-  containerSize
+  containerSize,
+  containerPositions
  }: {
   style: object,
   rotate?: string,
   containerPositionNumber: number,
-  containerSize?: number
+  containerSize?: number,
+  containerPositions: any
 }) => {
   // Keep track of users household name
   const { containerStatus, isLoading } = useTracker(() => {

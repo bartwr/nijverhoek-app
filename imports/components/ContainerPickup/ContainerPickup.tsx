@@ -150,24 +150,27 @@ export const ContainerPickup = () => {
           height: '100%',
         }}>
         {containerPositions.map((x) => {
-          return <motion.div key={x.containerPositionNumber} style={{
-            position: 'absolute',
-            left: x.left,
-            top: x.top || '59%',
-            width: '12vh',
-          }}
-          className="cursor-pointer"
-          onClick={() => {
-            onContainerClick(x.containerPositionNumber)
-          }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          >
-            <Container
-              containerPositionNumber={x.containerPositionNumber}
-              rotate={x.rotate}
-            />
-          </motion.div>
+          return <>
+            <motion.div key={x.containerPositionNumber} style={{
+              position: 'absolute',
+              left: x.left,
+              top: x.top || '59%',
+              width: '12vh',
+            }}
+            className="cursor-pointer"
+            onClick={() => {
+              onContainerClick(x.containerPositionNumber)
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            >
+              <Container
+                containerPositionNumber={x.containerPositionNumber}
+                rotate={x.rotate}
+                containerPositions={containerPositions}
+              />
+            </motion.div>
+          </>
         })}
         <img src="/images/components/ContainerPickup/map.png?3" alt="Container map"
           className="ContainerPickup-map block"

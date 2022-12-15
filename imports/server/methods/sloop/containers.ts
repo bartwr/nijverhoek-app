@@ -33,10 +33,19 @@ Meteor.methods({
   },
   // 
   'containers.getContainerStatus': function(containerPositionNumber: number) {
-    console.log('containerPositionNumber', containerPositionNumber)
     return Containers.findOne({
       containerPositionNumber: containerPositionNumber,
     }, {
+      sort: {
+        dt_created: -1
+      }
+    });
+  },
+  'containers.getContainerLogs': function(containerPositionNumber: number) {
+    return Containers.find({
+      containerPositionNumber: containerPositionNumber,
+    }, {
+      limit: 10,
       sort: {
         dt_created: -1
       }

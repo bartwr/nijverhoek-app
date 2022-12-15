@@ -8,6 +8,7 @@ import moment from 'moment';
 import {Overlay} from '../Overlay/Overlay.tsx';
 import {Select} from '../Form/Select.tsx';
 import {Button} from '../Button/Button.tsx';
+import {ContainerLogs} from './ContainerLogs.tsx';
 
 import './ContainerEdit.css';
 
@@ -21,6 +22,7 @@ export const ContainerEdit = ({
 
   const [containerStatus, setContainerStatus] = useState();
   const [timeoutDone, setTimeoutDone] = useState(false);
+  const [showLogs, setShowLogs] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -77,6 +79,7 @@ export const ContainerEdit = ({
       containerType = '';
     }
 
+    console.log('containerType', containerType)
     Meteor.call('containers.addStatus', {
       submittedByHouseNumber: submittedByHouseNumber,
       containerPositionNumber: containerPositionNumber,
@@ -95,56 +98,62 @@ export const ContainerEdit = ({
       title="Container status"
       onClose={onClose}
     >
-      <p className="text-gray-300">
-        {containerStatus ? 'Laatste update: ' + moment(containerStatus.dt_created).format('DD MMM, HH:mm') : ''}&nbsp;
+      <p className="cursor-pointer text-gray-300 my-4 block" onClick={() => {
+        setShowLogs(! showLogs);
+      }}>
+        {containerStatus ? <span>📑 {moment(containerStatus.dt_created).format('DD MMM, HH:mm')}</span> : ''} 
       </p>
       
-      <div className="my-8 flex flex justify-around">
-        <div>
-          Container<br /><br />
-          <Select name="containerNumber" id="js-containerNumber" style={{textAlign: 'center'}}>
-            <option value="">?</option>
-            {Array.from(Array(12), (_, number) => <option value={number+1} key={number+1}>
-              {number+1}
-            </option>)}
-          </Select>
-        </div>
-        <div>
-          is<br /><br />
-          <Select name="status" id="js-status" style={{textAlign: 'left'}}>
-            <option value="vol">vol</option>
-            <option value="doorgegeven-aan-renewi">vol (doorgegeven)</option>
-            <option value="halfvol">halfvol</option>
-            <option value="leeg">leeg</option>
-            <option value="weggehaald">weggehaald</option>
-          </Select>
-        </div>
-      </div>
+      {showLogs && <ContainerLogs containerPositionNumber={containerPositionNumber} />}
 
-      <div className="my-8 flex flex justify-around">
-        <div>
-          van type<br /><br />
-          <Select name="containerType" id="js-containerType" style={{textAlign: 'center'}}>
-            <option value="">?</option>
-            <option value="bouw-en-sloop">Bouw&Sloop</option>
-            <option value="houtafval-b">Houtafval</option>
-          </Select>
+      {! showLogs && <>
+        <div className="my-8 flex flex justify-around">
+          <div>
+            Container<br /><br />
+            <Select name="containerNumber" id="js-containerNumber" style={{textAlign: 'center'}}>
+              <option value="">?</option>
+              {Array.from(Array(12), (_, number) => <option value={number+1} key={number+1}>
+                {number+1}
+              </option>)}
+            </Select>
+          </div>
+          <div>
+            is<br /><br />
+            <Select name="status" id="js-status" style={{textAlign: 'left'}}>
+              <option value="vol">vol</option>
+              <option value="doorgegeven-aan-renewi">vol (doorgegeven)</option>
+              <option value="halfvol">halfvol</option>
+              <option value="leeg">leeg</option>
+              <option value="weggehaald">weggehaald</option>
+            </Select>
+          </div>
         </div>
-        <div>
-          en grootte<br /><br />
-          <Select name="containerSize" id="js-containerSize" style={{textAlign: 'center'}}>
-            <option value="">?</option>
-            <option value={20}>20 m3</option>
-            <option value={40}>40 m3</option>
-          </Select>
-        </div>
-      </div>
 
-      <div className="my-4">
-        <Button onClick={onSubmit} id="js-ContainerPickup-button">
-          Opslaan
-        </Button>
-      </div>
+        <div className="my-8 flex flex justify-around">
+          <div>
+            van type<br /><br />
+            <Select name="containerType" id="js-containerType" style={{textAlign: 'center'}}>
+              <option value="">?</option>
+              <option value="bouw-en-sloop">Bouw&Sloop</option>
+              <option value="houtafval-b">Houtafval</option>
+            </Select>
+          </div>
+          <div>
+            en grootte<br /><br />
+            <Select name="containerSize" id="js-containerSize" style={{textAlign: 'center'}}>
+              <option value="">?</option>
+              <option value={20}>20 m3</option>
+              <option value={40}>40 m3</option>
+            </Select>
+          </div>
+        </div>
+
+        <div className="my-4">
+          <Button onClick={onSubmit} id="js-ContainerPickup-button">
+            Opslaan
+          </Button>
+        </div>
+      </>}
     </Overlay>
   );
 }
