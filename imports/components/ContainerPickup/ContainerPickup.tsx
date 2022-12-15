@@ -182,6 +182,125 @@ export const ContainerPickup = () => {
           }}
         />
       </div>
+
+      <div style={{
+        position: 'absolute',
+        left: '16vh',
+        top: '73%',
+        width: '12vh',
+        fontSize: '24px'
+      }}>
+        1
+      </div>
+      <div style={{
+        position: 'absolute',
+        left: '34vh',
+        top: '73%',
+        width: '12vh',
+        fontSize: '24px'
+      }}>
+        2
+      </div>
+      <div style={{
+        position: 'absolute',
+        left: '58vh',
+        top: '73%',
+        width: '12vh',
+        fontSize: '24px'
+      }}>
+        3
+      </div>
+      <div style={{
+        position: 'absolute',
+        left: '75vh',
+        top: '73%',
+        width: '12vh',
+        fontSize: '24px'
+      }}>
+        4
+      </div>
+      <div style={{
+        position: 'absolute',
+        left: '105vh',
+        top: '73%',
+        width: '12vh',
+        fontSize: '24px'
+      }}>
+        5
+      </div>
+      <div style={{
+        position: 'absolute',
+        left: '130vh',
+        top: '73%',
+        width: '12vh',
+        fontSize: '24px'
+      }}>
+        6
+      </div>
+      <div style={{
+        position: 'absolute',
+        left: '152vh',
+        top: '73%',
+        width: '12vh',
+        fontSize: '24px'
+      }}>
+        7
+      </div>
+      <div style={{
+        position: 'absolute',
+        left: '175vh',
+        top: '73%',
+        width: '12vh',
+        fontSize: '24px'
+      }}>
+        8
+      </div>
+      <div style={{
+        position: 'absolute',
+        left: '198vh',
+        top: '73%',
+        width: '12vh',
+        fontSize: '24px'
+      }}>
+        9
+      </div>
+      <div style={{
+        position: 'absolute',
+        left: '226vh',
+        top: '71%',
+        width: '12vh',
+        fontSize: '24px'
+      }}>
+        10
+      </div>
+      <div style={{
+        position: 'absolute',
+        left: '235vh',
+        top: '26%',
+        width: '12vh',
+        fontSize: '24px'
+      }}>
+        11
+      </div>
+      <div style={{
+        position: 'absolute',
+        left: '226vh',
+        top: '22%',
+        width: '12vh',
+        fontSize: '24px'
+      }}>
+        12
+      </div>
+      <div style={{
+        position: 'absolute',
+        left: '214vh',
+        top: '17%',
+        width: '12vh',
+        fontSize: '24px'
+      }}>
+        13
+      </div>
+
     </div>
 
     {/*LEGEND*/}

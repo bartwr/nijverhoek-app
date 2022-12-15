@@ -79,7 +79,6 @@ export const ContainerEdit = ({
       containerType = '';
     }
 
-    console.log('containerType', containerType)
     Meteor.call('containers.addStatus', {
       submittedByHouseNumber: submittedByHouseNumber,
       containerPositionNumber: containerPositionNumber,

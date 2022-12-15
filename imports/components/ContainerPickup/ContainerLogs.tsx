@@ -35,8 +35,6 @@ export const ContainerLogs = ({
     }
   }, []);
 
-  console.log(containerLogs);
-
   return (
     <table className="w-full">
       <thead>
