@@ -13,6 +13,7 @@ import {Paragraph as P} from '../Paragraph/Paragraph';
 import {Select} from '../Form/Select.tsx';
 import {Button} from '../Button/Button.tsx';
 import {LayoutWithLogo} from '../LayoutWithLogo/LayoutWithLogo.tsx';
+import {Progress} from '../Progress/Progress.tsx';
 
 import './Household.css';
 
@@ -171,6 +172,8 @@ export const Landing = () => {
     session_end: {$exists: false}
   }, {sort: {memo: 1}}).fetch(), []);
 
+  const isAllowedToShareProgress = houseNumberCheckInCounters && houseNumberCheckInCounters[houseNumber] && houseNumberCheckInCounters[houseNumber] >= 2;
+
   return <LayoutWithLogo>
     <div className="flex flex-col justify-between">
 
@@ -221,6 +224,16 @@ export const Landing = () => {
         <img src="/images/components/ContainerPickup/container-pickup.jpg" alt="Pickup container" className="cursor-pointer" />
       </div>
     </div>
+
+    {isAllowedToShareProgress && <div className="my-4 mb-8">
+      <Title>
+        Voortgang
+      </Title>
+
+      <div className="py-4">
+        <Progress />
+      </div>
+    </div>}
 
   </LayoutWithLogo>
 }

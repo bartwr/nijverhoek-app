@@ -3,6 +3,7 @@ import moment from 'moment';
 
 import './households';
 import './containers';
+import './progress';
 
 import { Sessions } from '/imports/models/Sessions';
 
