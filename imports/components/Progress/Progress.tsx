@@ -57,7 +57,7 @@ const ProgressForm = ({
       </p>
 
       <div className="my-8">
-        <Select name="percentage" id="js-percentage" defaultValue={myProgress.percentage}>
+        <Select name="percentage" id="js-percentage" defaultValue={myProgress ? myProgress.percentage : 0}>
           {Array.from(Array(11), (_, number) => <option value={number*10} key={number*10}>
             {number*10}%
           </option>)}
