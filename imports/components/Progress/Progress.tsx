@@ -97,13 +97,23 @@ export const Progress = () => {
   //   houseNumber: 12,
   //   progress: 0.8
   // }]
+  const houseNumber = localStorage.getItem('SLOOPHOEK__houseNumber');
+
+  const LS_houseNumberCheckInCounters = localStorage.getItem('SLOOPHOEK__houseNumberCheckInCounters');
+  let houseNumberCheckInCounters = [];
+  if(LS_houseNumberCheckInCounters) {
+    houseNumberCheckInCounters = JSON.parse(LS_houseNumberCheckInCounters);
+  }
+
+  const isAllowedToShareProgress = houseNumberCheckInCounters && houseNumberCheckInCounters[houseNumber] && houseNumberCheckInCounters[houseNumber] >= 2;
 
   return <>
     {showOverlay && <ProgressForm onClose={() => {
       setShowOverlay(false);
     }} />}
-    <div className="cursor-pointer overflow-x-auto -mx-6" onClick={() => {
-      setShowOverlay(true)
+    <div className={`${isAllowedToShareProgress ? 'cursor-pointer' : ''} overflow-x-auto -mx-6`} onClick={() => {
+      if(! isAllowedToShareProgress) return;
+      setShowOverlay(true);
     }}>
       <ProgressSvg data={allProgress} width="100%" />
     </div>

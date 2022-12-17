@@ -172,8 +172,6 @@ export const Landing = () => {
     session_end: {$exists: false}
   }, {sort: {memo: 1}}).fetch(), []);
 
-  const isAllowedToShareProgress = houseNumberCheckInCounters && houseNumberCheckInCounters[houseNumber] && houseNumberCheckInCounters[houseNumber] >= 2;
-
   return <LayoutWithLogo>
     <div className="flex flex-col justify-between">
 
@@ -225,7 +223,7 @@ export const Landing = () => {
       </div>
     </div>
 
-    {isAllowedToShareProgress && <div className="my-4 mb-8">
+    <div className="my-4 mb-8">
       <Title>
         Voortgang
       </Title>
@@ -233,7 +231,7 @@ export const Landing = () => {
       <div className="py-4">
         <Progress />
       </div>
-    </div>}
+    </div>
 
   </LayoutWithLogo>
 }
