@@ -28,6 +28,8 @@ function Icon({
      }
   }
 
+  const opacity = "0.8";
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +59,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.896"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(12)}
           fillOpacity="1"
           rx="0"
@@ -80,7 +82,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.896"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(13)}
           fillOpacity="1"
           rx="0"
@@ -103,7 +105,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.896"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(14)}
           fillOpacity="1"
           rx="0"
@@ -126,7 +128,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.896"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(15)}
           fillOpacity="1"
           rx="0"
@@ -149,7 +151,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.896"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(16)}
           fillOpacity="1"
           rx="0"
@@ -172,7 +174,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.896"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(1)}
           fillOpacity="1"
           rx="0"
@@ -194,7 +196,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.896"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(2)}
           fillOpacity="1"
           rx="0"
@@ -216,7 +218,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.896"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(3)}
           fillOpacity="1"
           rx="0"
@@ -238,7 +240,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.896"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(4)}
           fillOpacity="1"
           rx="0"
@@ -260,7 +262,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.896"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(5)}
           fillOpacity="1"
           rx="0"
@@ -282,7 +284,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.896"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(6)}
           fillOpacity="1"
           rx="0"
@@ -304,7 +306,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.766"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(8)}
           fillOpacity="1"
           rx="0"
@@ -326,7 +328,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.582"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(7)}
           fillOpacity="1"
           rx="0"
@@ -348,7 +350,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.457"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(11)}
           fillOpacity="1"
           rx="0"
@@ -370,7 +372,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.189"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(10)}
           fillOpacity="1"
           rx="0"
@@ -392,7 +394,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.444"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(9)}
           fillOpacity="1"
           rx="0"
@@ -414,7 +416,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="4.11"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(17)}
           fillOpacity="1"
           rx="0"
@@ -436,7 +438,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.78"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(18)}
           fillOpacity="1"
           rx="0"
@@ -458,7 +460,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.838"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(19)}
           fillOpacity="1"
           rx="0"
@@ -480,7 +482,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="4.032"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(20)}
           fillOpacity="1"
           rx="0"
@@ -502,7 +504,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.976"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(21)}
           fillOpacity="1"
           rx="0"
@@ -524,7 +526,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="4.017"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(22)}
           fillOpacity="1"
           rx="0"
@@ -546,7 +548,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.855"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(23)}
           fillOpacity="1"
           rx="0"
@@ -568,7 +570,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.883"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(0)}
           fillOpacity="1"
           rx="0"
@@ -590,7 +592,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.883"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(1)}
           fillOpacity="1"
           rx="0"
@@ -613,7 +615,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.883"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(24)}
           fillOpacity="1"
           rx="0"
@@ -635,7 +637,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.883"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(32)}
           fillOpacity="1"
           rx="0"
@@ -658,7 +660,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="3.883"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(30)}
           fillOpacity="1"
           rx="0"
@@ -681,7 +683,7 @@ function Icon({
           strokeOpacity="1"
           strokeWidth="4.027"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(29)}
           fillOpacity="1"
           rx="0"
@@ -694,7 +696,7 @@ function Icon({
           strokeWidth="3.888"
           d="M1279.175 197.365l.272 104.028h-56.965v-120.35l19.66-.125 38.113 18.186"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(25)}
           fillOpacity="1"
           stopColor="#000"
@@ -704,7 +706,7 @@ function Icon({
           strokeWidth="4.435"
           d="M1353.777 214.527l.355 86.623H1279.7l-.323-103.168 30.933-6.885 44.587 25.304"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(26)}
           fillOpacity="1"
           stopColor="#000"
@@ -714,7 +716,7 @@ function Icon({
           strokeWidth="4.128"
           d="M1538.897 229.439l-17.63 73.158-64.426-1.38.864-31.553-17.05-9.568 36.787-65.782m0 0l62.16 37.26"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(28)}
           fillOpacity="1"
           stopColor="#000"
@@ -724,7 +726,7 @@ function Icon({
           strokeWidth="4.435"
           d="M1240.646 154.318l39.073-67.806 65.02 36.229-35.025 64.987-2.641 4.866m1.487-1.092l-29.731 6.642-38.45-17.82.578-27.256"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(31)}
           fillOpacity="1"
           stopColor="#000"
@@ -734,7 +736,7 @@ function Icon({
           strokeWidth="5.186"
           d="M1456.864 267.38l-.054 33.425h-102.407s-1.007-75.91-1.007-84.901l35.08 18.571 69.775 35.24"
           display="inline"
-          opacity="0.6"
+          opacity={opacity}
           fill={getFillColor(27)}
           fillOpacity="1"
           stopColor="#000"
