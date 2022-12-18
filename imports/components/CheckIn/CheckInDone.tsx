@@ -9,8 +9,8 @@ function showNotification() {
     if (result === "granted") {
       // https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification
       navigator.serviceWorker.ready.then((registration) => {
-        registration.showNotification("Ingecheckt bij De Nijverhoek", {
-          // body: "✅ ✅",
+        registration.showNotification("Je bent ingecheckt", {
+          body: "Klik om uit te checken",
           silent: true,
           icon: 'https://app.nijverhoek.nl/images/icons-sloophoek-512.png',
           badge: 'https://app.nijverhoek.nl/images/icons-sloophoek-192.png',
@@ -32,7 +32,8 @@ export const CheckInDone = () => {
 
   useEffect(() => {
     const houseNumber = localStorage.getItem('SLOOPHOEK__houseNumber');
-    if(houseNumber == '2' || houseNumber == '31') {
+    // if(houseNumber == '2' || houseNumber == '31') {
+    if(houseNumber == '2') {
       showNotification();
     }
 
