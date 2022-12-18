@@ -23,28 +23,39 @@ const ProgressForm = ({
     percentage: 0
   });
 
+  const [theHouseNumber, setTheHouseNumber] = useState(parseInt(localStorage.getItem('SLOOPHOEK__houseNumber')));
+
   useEffect(() => {
-    const houseNumber = parseInt(localStorage.getItem('SLOOPHOEK__houseNumber'));
-    Meteor.call('containers.getProgressForHousehold', houseNumber, (err, res) => {
+    Meteor.call('containers.getProgressForHousehold', parseInt(theHouseNumber), (err, res) => {
       if(err) {
         console.error(err);
         return;
       }
-
+      if(res === undefined) {
+        setMyProgress({ percentage: 0 });
+        document.getElementById('js-percentage').value = 0;
+        return;
+      }
       setMyProgress(res);
-
       document.getElementById('js-percentage').value = res.percentage;
     }
-  }, [])
+  }, [
+    theHouseNumber
+  ])
 
   const onSubmit = () => {
     const percentage = document.getElementById('js-percentage').value;
     Meteor.call('containers.addProgress', {
-      submittedByHouseNumber: parseInt(localStorage.getItem('SLOOPHOEK__houseNumber')),
+      submittedByHouseNumber: parseInt(theHouseNumber),
       percentage: parseInt(percentage)
     }, (err, res) => {
       onClose();
     })
+  }
+
+  const isInSloopTeam = (houseNumber) => {
+    const sloopTeamMembers = ['2', '31'];
+    return sloopTeamMembers.indexOf(houseNumber) > -1;
   }
 
   return (
@@ -53,7 +64,18 @@ const ProgressForm = ({
       onClose={onClose}
     >
       <p className="mt-6">
-        Hoi kavel <u>{localStorage.getItem('SLOOPHOEK__houseNumber')}</u>, hoever ben jij al gesloopt, in een percentage uitgedrukt?
+        Hoi kavel {isInSloopTeam(localStorage.getItem('SLOOPHOEK__houseNumber')) ?
+          <select id="js-houseNumber" defaultValue={localStorage.getItem('SLOOPHOEK__houseNumber')} onChange={(e) => {
+            setTheHouseNumber(e.target.value);
+          }}>
+            {Array.from(Array(32), (_, number) => <option value={number+1} key={number+1}>
+              {number+1}
+            </option>)}
+          </select>
+          :
+          <u>{localStorage.getItem('SLOOPHOEK__houseNumber')}</u>
+        }, 
+        hoever ben jij al gesloopt, in een percentage uitgedrukt?
       </p>
 
       <div className="my-8">
