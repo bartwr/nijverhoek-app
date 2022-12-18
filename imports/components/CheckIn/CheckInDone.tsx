@@ -3,8 +3,39 @@ import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
 import {LayoutWithLargeIcon} from '../LayoutWithLargeIcon/LayoutWithLargeIcon';
 
+function showNotification() {
+  if(! navigator.serviceWorker) return;
+  Notification.requestPermission((result) => {
+    if (result === "granted") {
+      // https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification
+      navigator.serviceWorker.ready.then((registration) => {
+        registration.showNotification("Ingecheckt bij De Nijverhoek", {
+          // body: "✅ ✅",
+          silent: true,
+          icon: 'https://app.nijverhoek.nl/images/icons-sloophoek-512.png',
+          badge: 'https://app.nijverhoek.nl/images/icons-sloophoek-192.png',
+          tag: "nijverhoek-checked-in",
+          requireInteraction: true,
+          actions: [
+             {
+               action: 'check-out-url',
+               title: 'Check uit'
+             }
+          ]
+        });
+      });
+    }
+  });
+}
+
 export const CheckInDone = () => {
+
   useEffect(() => {
+    const houseNumber = localStorage.getItem('SLOOPHOEK__houseNumber');
+    if(houseNumber == '2' || houseNumber == '31') {
+      showNotification();
+    }
+
     const TO = setTimeout(() => {
       FlowRouter.go('index')
     }, 10000);

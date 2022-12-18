@@ -54,7 +54,8 @@ const ProgressForm = ({
   }
 
   const isInSloopTeam = (houseNumber) => {
-    const sloopTeamMembers = ['2', '31'];
+    // const sloopTeamMembers = ['2', '31'];
+    const sloopTeamMembers = ['2'];
     return sloopTeamMembers.indexOf(houseNumber) > -1;
   }
 

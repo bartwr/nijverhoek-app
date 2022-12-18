@@ -3,8 +3,18 @@ import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 
 import {LayoutWithLargeIcon} from '../LayoutWithLargeIcon/LayoutWithLargeIcon';
 
+function closeNotifications() {
+  navigator.serviceWorker.ready.then((registration) => {
+    registration.getNotifications().then((notifications) => {
+      notifications.forEach(notification => notification.close());
+    })
+  });
+}
+
 export const CheckOutDone = () => {
   useEffect(() => {
+    closeNotifications();
+
     const TO = setTimeout(() => {
       FlowRouter.go('index')
     }, 10000);

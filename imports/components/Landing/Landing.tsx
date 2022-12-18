@@ -166,7 +166,7 @@ const Household = ({children}: {
 export const Landing = () => {
   useEffect(x => {
     Meteor.subscribe('sessions.all');
-  })
+  }, [])
 
   const activeSessions = useTracker(() => Sessions.find({
     session_end: {$exists: false}
