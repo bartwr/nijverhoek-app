@@ -66,7 +66,7 @@ export const Container = ({
   return (
     <div className="relative">
       {containerStatus && containerStatus.containerType && <div className={`
-        absolute top-0 right-0 bottom-0 left-0 flex flex-col text-center justify-center text-base lg:text-xl xl:text-2xl
+        absolute top-0 right-0 bottom-0 left-0 flex flex-col text-center justify-center text-base lg:text-lg xl:text-lg
         ${containerStatus.containerSize != 40 ? '-ml-2' : ''}
       `}>
         {getIcon(containerStatus.containerType)}
@@ -74,7 +74,7 @@ export const Container = ({
       <motion.svg
         animate={{ opacity: opacity }}
         transition={{ delay: 0.8 }}
-        viewBox="0 0 180 180"
+        viewBox="0 0 175 180"
         xmlns="<http://www.w3.org/2000/svg>"
         style={Object.assign({}, {opacity: 0}, style)}
       >

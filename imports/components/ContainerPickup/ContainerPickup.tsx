@@ -40,40 +40,40 @@ export const ContainerPickup = () => {
   const containerPositions = [
   {
     containerPositionNumber: 20,
-    left: '6%',
+    left: '18%',
     rotate: '-18deg'
   },
   {
     containerPositionNumber: 1,
-    left: '12.5%'
+    left: '23%'
   },
   {
     containerPositionNumber: 2,
-    left: '15.5%'
+    left: '25.2%'
   },
   {
     containerPositionNumber: 3,
-    left: '22%'
+    left: '30%'
   },
   {
     containerPositionNumber: 4,
-    left: '24.8%'
+    left: '32%'
   },
   {
     containerPositionNumber: 5,
-    left: '30.2%'
+    left: '36%'
   },
   // {
   //   containerPositionNumber: 6,
-  //   left: '33.2%'
+  //   left: '44.2%'
   // },
   {
     containerPositionNumber: 7,
-    left: '40%'
+    left: '43%'
   },
   {
     containerPositionNumber: 8,
-    left: '43%'
+    left: '45%'
   },
   {
     containerPositionNumber: 9,
@@ -81,56 +81,56 @@ export const ContainerPickup = () => {
   },
   {
     containerPositionNumber: 10,
-    left: '53%'
+    left: '52%'
   },
   {
     containerPositionNumber: 11,
-    left: '59%'
+    left: '56.5%'
   },
   {
     containerPositionNumber: 12,
-    left: '62%'
+    left: '58.5%'
   },
   {
     containerPositionNumber: 13,
-    left: '67.9%'
+    left: '63%'
   },
   {
     containerPositionNumber: 14,
-    left: '70.8%'
+    left: '65%'
   },
   {
     containerPositionNumber: 15,
-    left: '78%'
+    left: '70%'
   },
   // {
   //   containerPositionNumber: 16,
-  //   left: '79.3%'
+  //   left: '90.3%'
   // },
   {
     containerPositionNumber: 21,
-    left: '88%'
+    left: '76.5%'
   },
   {
     containerPositionNumber: 22,
-    left: '91%'
+    left: '79%'
   },
   {
     containerPositionNumber: 17,
-    left: '91%',
-    top: '30%',
+    left: '76%',
+    top: '27.7%',
     rotate: '67deg',
   },
   {
     containerPositionNumber: 18,
-    left: '87%',
-    top: '25%',
+    left: '78.5%',
+    top: '30.5%',
     rotate: '67deg',
   },
   {
     containerPositionNumber: 19,
-    left: '83%',
-    top: '20%',
+    left: '81%',
+    top: '33.4%',
     rotate: '67deg',
   }]
 
@@ -154,8 +154,8 @@ export const ContainerPickup = () => {
             <motion.div key={x.containerPositionNumber} style={{
               position: 'absolute',
               left: x.left,
-              top: x.top || '59%',
-              width: '12vh',
+              top: x.top || '49.5%',
+              width: '6vh',
             }}
             className="cursor-pointer"
             onClick={() => {
@@ -172,7 +172,7 @@ export const ContainerPickup = () => {
             </motion.div>
           </>
         })}
-        <img src="/images/components/ContainerPickup/map.png?3" alt="Container map"
+        <img src="/images/components/ContainerPickup/map-v2.png?0" alt="Container map"
           className="ContainerPickup-map block"
           id="js-ContainerPickup-map"
           style={{
@@ -183,19 +183,20 @@ export const ContainerPickup = () => {
         />
       </div>
 
+      {/*
       <div style={{
         position: 'absolute',
-        left: '16vh',
-        top: '73%',
+        left: '35vh',
+        top: '57%',
         width: '12vh',
-        fontSize: '24px'
+        fontSize: '24px',
       }}>
         1
       </div>
       <div style={{
         position: 'absolute',
         left: '34vh',
-        top: '73%',
+        top: '69%',
         width: '12vh',
         fontSize: '24px'
       }}>
@@ -204,7 +205,7 @@ export const ContainerPickup = () => {
       <div style={{
         position: 'absolute',
         left: '58vh',
-        top: '73%',
+        top: '69%',
         width: '12vh',
         fontSize: '24px'
       }}>
@@ -213,7 +214,7 @@ export const ContainerPickup = () => {
       <div style={{
         position: 'absolute',
         left: '75vh',
-        top: '73%',
+        top: '69%',
         width: '12vh',
         fontSize: '24px'
       }}>
@@ -222,7 +223,7 @@ export const ContainerPickup = () => {
       <div style={{
         position: 'absolute',
         left: '105vh',
-        top: '73%',
+        top: '69%',
         width: '12vh',
         fontSize: '24px'
       }}>
@@ -231,7 +232,7 @@ export const ContainerPickup = () => {
       <div style={{
         position: 'absolute',
         left: '130vh',
-        top: '73%',
+        top: '69%',
         width: '12vh',
         fontSize: '24px'
       }}>
@@ -240,7 +241,7 @@ export const ContainerPickup = () => {
       <div style={{
         position: 'absolute',
         left: '152vh',
-        top: '73%',
+        top: '69%',
         width: '12vh',
         fontSize: '24px'
       }}>
@@ -249,7 +250,7 @@ export const ContainerPickup = () => {
       <div style={{
         position: 'absolute',
         left: '175vh',
-        top: '73%',
+        top: '69%',
         width: '12vh',
         fontSize: '24px'
       }}>
@@ -258,7 +259,7 @@ export const ContainerPickup = () => {
       <div style={{
         position: 'absolute',
         left: '198vh',
-        top: '73%',
+        top: '69%',
         width: '12vh',
         fontSize: '24px'
       }}>
@@ -267,7 +268,7 @@ export const ContainerPickup = () => {
       <div style={{
         position: 'absolute',
         left: '226vh',
-        top: '71%',
+        top: '69%',
         width: '12vh',
         fontSize: '24px'
       }}>
@@ -276,7 +277,7 @@ export const ContainerPickup = () => {
       <div style={{
         position: 'absolute',
         left: '235vh',
-        top: '26%',
+        top: '22%',
         width: '12vh',
         fontSize: '24px'
       }}>
@@ -285,7 +286,7 @@ export const ContainerPickup = () => {
       <div style={{
         position: 'absolute',
         left: '226vh',
-        top: '22%',
+        top: '18%',
         width: '12vh',
         fontSize: '24px'
       }}>
@@ -294,19 +295,20 @@ export const ContainerPickup = () => {
       <div style={{
         position: 'absolute',
         left: '214vh',
-        top: '17%',
+        top: '13%',
         width: '12vh',
         fontSize: '24px'
       }}>
         13
       </div>
+    */}
 
     </div>
 
     {/*LEGEND*/}
     <div className="fixed z-2 bottom-0 left-0 w-full overflow-x-auto">
       <img src="/images/components/ContainerPickup/legend.png" alt="Container map"
-        className="ContainerPickup-map w-full bg-white p-1"
+        className="ContainerPickup-map w-full bg-white p-1 block"
       />
     </div>
 
