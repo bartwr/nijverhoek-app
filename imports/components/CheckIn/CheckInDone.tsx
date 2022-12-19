@@ -13,15 +13,9 @@ function showNotification() {
           body: "Klik om uit te checken",
           silent: true,
           icon: 'https://app.nijverhoek.nl/images/icons-sloophoek-512.png',
-          badge: 'https://app.nijverhoek.nl/images/icons-sloophoek-192.png',
+          badge: 'https://app.nijverhoek.nl/images/icons-sloophoek-96.png',
           tag: "nijverhoek-checked-in",
-          requireInteraction: true,
-          actions: [
-             {
-               action: 'check-out-url',
-               title: 'Check uit'
-             }
-          ]
+          requireInteraction: true
         });
       });
     }
@@ -32,8 +26,7 @@ export const CheckInDone = () => {
 
   useEffect(() => {
     const houseNumber = localStorage.getItem('SLOOPHOEK__houseNumber');
-    // if(houseNumber == '2' || houseNumber == '31') {
-    if(houseNumber == '2') {
+    if(houseNumber == '2' || houseNumber == '31') {
       showNotification();
     }
 

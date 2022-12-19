@@ -87,3 +87,7 @@ function hasSameHash(firstUrl, secondUrl) {
 
 // Service worker created by Ilan Schemoul alias NitroBAY as a specific Service Worker for Meteor
 // Please see https://github.com/NitroBAY/meteor-service-worker for the official project source
+
+self.addEventListener("notificationclick", (ev) => {
+  clients.openWindow("https://app.nijverhoek.nl/sloop/checkout");
+});
