@@ -1271,7 +1271,7 @@ function Icon({
             inlineSize: "0",
             InkscapeStroke: "none",
           }}
-          x="341.476"
+          x="336"
           y="285.346"
           fill="#000"
           fillOpacity="1"
@@ -1296,7 +1296,7 @@ function Icon({
           writingMode="lr-tb"
         >
           <tspan
-            x="341.476"
+            x="336"
             y="285.346"
             style={{
               lineHeight: "1.25",
@@ -1391,7 +1391,7 @@ function Icon({
             inlineSize: "0",
             InkscapeStroke: "none",
           }}
-          x="341.476"
+          x="336"
           y="285.346"
           fill="#000"
           fillOpacity="1"
@@ -1416,7 +1416,7 @@ function Icon({
           writingMode="lr-tb"
         >
           <tspan
-            x="341.476"
+            x="336"
             y="285.346"
             style={{
               lineHeight: "1.25",
@@ -1511,127 +1511,7 @@ function Icon({
             inlineSize: "0",
             InkscapeStroke: "none",
           }}
-          x="341.476"
-          y="285.346"
-          fill="#000"
-          fillOpacity="1"
-          strokeDasharray="none"
-          strokeDashoffset="0"
-          strokeLinecap="butt"
-          strokeLinejoin="miter"
-          strokeMiterlimit="4"
-          strokeOpacity="1"
-          baselineShift="baseline"
-          direction="ltr"
-          dominantBaseline="auto"
-          fontFamily="Baloo Bhai"
-          fontStretch="normal"
-          fontStyle="normal"
-          fontVariant="normal"
-          fontWeight="normal"
-          stopColor="#000"
-          textAnchor="start"
-          transform="translate(266)"
-          vectorEffect="none"
-          writingMode="lr-tb"
-        >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            13
-          </tspan>
-        </text>
-        <text
-          xmlSpace="preserve"
-          style={{
-            lineHeight: "1.25",
-            InkscapeFontSpecification: "'Baloo Bhai'",
-            fontVariantLigatures: "normal",
-            fontVariantPosition: "normal",
-            fontVariantCaps: "normal",
-            fontVariantNumeric: "normal",
-            fontVariantAlternates: "normal",
-            fontVariantEastAsian: "normal",
-            fontFeatureSettings: "normal",
-            fontVariationSettings: "normal",
-            WebkitTextIndent: "0",
-            textIndent: "0",
-            WebkitTextAlign: "start",
-            textAlign: "start",
-            WebkitTextDecorationLine: "none",
-            textDecorationLine: "none",
-            WebkitTextDecorationStyle: "solid",
-            textDecorationStyle: "solid",
-            WebkitTextDecorationColor: "#000000",
-            textDecorationColor: "#000000",
-            WebkitTextTransform: "none",
-            textTransform: "none",
-            WebkitTextOrientation: "mixed",
-            textOrientation: "mixed",
-            whiteSpace: "normal",
-            shapePadding: "0",
-            shapeMargin: "0",
-            inlineSize: "0",
-            InkscapeStroke: "none",
-          }}
-          x="341.476"
+          x="336"
           y="285.346"
           fill="#000"
           fillOpacity="1"
@@ -1656,7 +1536,7 @@ function Icon({
           writingMode="lr-tb"
         >
           <tspan
-            x="341.476"
+            x="336"
             y="285.346"
             style={{
               lineHeight: "1.25",
@@ -1751,7 +1631,7 @@ function Icon({
             inlineSize: "0",
             InkscapeStroke: "none",
           }}
-          x="341.476"
+          x="336"
           y="285.346"
           fill="#000"
           fillOpacity="1"
@@ -1776,7 +1656,7 @@ function Icon({
           writingMode="lr-tb"
         >
           <tspan
-            x="341.476"
+            x="336"
             y="285.346"
             style={{
               lineHeight: "1.25",
@@ -1871,7 +1751,7 @@ function Icon({
             inlineSize: "0",
             InkscapeStroke: "none",
           }}
-          x="341.476"
+          x="333"
           y="285.346"
           fill="#000"
           fillOpacity="1"
@@ -1896,7 +1776,7 @@ function Icon({
           writingMode="lr-tb"
         >
           <tspan
-            x="341.476"
+            x="333"
             y="285.346"
             style={{
               lineHeight: "1.25",
@@ -1991,7 +1871,7 @@ function Icon({
             inlineSize: "0",
             InkscapeStroke: "none",
           }}
-          x="341.476"
+          x="336"
           y="285.346"
           fill="#000"
           fillOpacity="1"
@@ -2016,7 +1896,7 @@ function Icon({
           writingMode="lr-tb"
         >
           <tspan
-            x="341.476"
+            x="336"
             y="285.346"
             style={{
               lineHeight: "1.25",
@@ -2136,7 +2016,7 @@ function Icon({
           writingMode="lr-tb"
         >
           <tspan
-            x="341.476"
+            x="336"
             y="285.346"
             style={{
               lineHeight: "1.25",
@@ -2231,7 +2111,7 @@ function Icon({
             inlineSize: "0",
             InkscapeStroke: "none",
           }}
-          x="341.476"
+          x="336"
           y="285.346"
           fill="#000"
           fillOpacity="1"
@@ -2256,7 +2136,7 @@ function Icon({
           writingMode="lr-tb"
         >
           <tspan
-            x="341.476"
+            x="336"
             y="285.346"
             style={{
               lineHeight: "1.25",
@@ -2351,7 +2231,7 @@ function Icon({
             inlineSize: "0",
             InkscapeStroke: "none",
           }}
-          x="341.476"
+          x="336"
           y="285.346"
           fill="#000"
           fillOpacity="1"
@@ -2376,7 +2256,7 @@ function Icon({
           writingMode="lr-tb"
         >
           <tspan
-            x="341.476"
+            x="336"
             y="285.346"
             style={{
               lineHeight: "1.25",
@@ -2471,7 +2351,7 @@ function Icon({
             inlineSize: "0",
             InkscapeStroke: "none",
           }}
-          x="341.476"
+          x="336"
           y="285.346"
           fill="#000"
           fillOpacity="1"
@@ -2496,7 +2376,7 @@ function Icon({
           writingMode="lr-tb"
         >
           <tspan
-            x="341.476"
+            x="336"
             y="285.346"
             style={{
               lineHeight: "1.25",
@@ -3071,7 +2951,7 @@ function Icon({
             inlineSize: "0",
             InkscapeStroke: "none",
           }}
-          x="341.476"
+          x="336"
           y="285.346"
           fill="#000"
           fillOpacity="1"
@@ -3096,7 +2976,7 @@ function Icon({
           writingMode="lr-tb"
         >
           <tspan
-            x="341.476"
+            x="336"
             y="285.346"
             style={{
               lineHeight: "1.25",
