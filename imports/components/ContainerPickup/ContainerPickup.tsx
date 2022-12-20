@@ -31,6 +31,14 @@ export const ContainerPickup = () => {
     window.addEventListener('resize', function () {
       setWidthForImage();
     })
+
+    setWidthForImage();
+
+    return () => {
+      window.removeEventListener('resize', function () {
+        setWidthForImage();
+      });
+    }
   }, [])
 
   const onContainerClick = (containerPositionNumber: number) => {
