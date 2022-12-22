@@ -111,14 +111,16 @@ export const Progress = () => {
     }
   }, []);
 
-  // const data = [{
-  //   houseNumber: 1,
-  //   progress: 1
-  // },
-  // {
-  //   houseNumber: 12,
-  //   progress: 0.8
-  // }]
+  const calculateTotalProgress = (allProgress) => {
+    if(! allProgress) return 0;
+    let countEntries = 0, sumTotalPercentage = 0;
+    allProgress.forEach(x => {
+      countEntries++;
+      sumTotalPercentage += parseInt(x.percentage);
+    });
+    return sumTotalPercentage / countEntries;
+  }
+
   const houseNumber = localStorage.getItem('SLOOPHOEK__houseNumber');
 
   const LS_houseNumberCheckInCounters = localStorage.getItem('SLOOPHOEK__houseNumberCheckInCounters');
@@ -129,12 +131,14 @@ export const Progress = () => {
 
   const isAllowedToShareProgress = houseNumberCheckInCounters && houseNumberCheckInCounters[houseNumber] && houseNumberCheckInCounters[houseNumber] >= 2;
 
+  const totalProgress = calculateTotalProgress(allProgress);
+
   return <>
     {showOverlay && <ProgressForm onClose={() => {
       setShowOverlay(false);
     }} />}
     <div className="-mt-2 mb-4">
-      De Nijverhoek is voor X% gesloopt
+      De Nijverhoek is voor {Math.round(totalProgress)}% gesloopt
     </div>
     <div className={`${isAllowedToShareProgress ? 'cursor-pointer' : ''} overflow-x-auto overflow-y-hidden -mx-6`} onClick={() => {
       if(! isAllowedToShareProgress) return;
