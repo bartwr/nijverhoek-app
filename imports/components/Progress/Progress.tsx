@@ -118,6 +118,7 @@ export const Progress = () => {
       countEntries++;
       sumTotalPercentage += parseInt(x.percentage);
     });
+    console.log('PROGRESS: Number of households', countEntries);
     return sumTotalPercentage / countEntries;
   }
 
