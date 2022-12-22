@@ -35,7 +35,7 @@ export const Container = ({
     }
   }, []);
 
-  let fillColor = '#ccc', opacity = 1;
+  let fillColor = '#ccc', opacity = 1, emoticon;
   if(containerStatus && containerStatus.status === 'vol') {
     fillColor = '#f01301';
   }
@@ -51,6 +51,11 @@ export const Container = ({
   else if(containerStatus && containerStatus.status === 'weggehaald') {
     fillColor = '#eee';
     opacity = 0.1;
+  }
+  else if(containerStatus && containerStatus.status === 'volgende-locatie') {
+    fillColor = 'transparent';
+    opacity = 0.2;
+    emoticon = '🌟';
   }
   // console.log('containerStatus', containerStatus)
 
@@ -70,6 +75,14 @@ export const Container = ({
         ${containerStatus.containerSize != 40 ? '-ml-2' : ''}
       `}>
         {getIcon(containerStatus.containerType)}
+      </div>}
+      {emoticon && <div className={`
+        absolute top-0 right-0 bottom-0 left-0 flex flex-col text-center justify-center text-base lg:text-lg xl:text-lg
+        ${containerStatus.containerSize != 40 ? '-ml-2' : ''}
+      `}>
+        <span className="rounded-full bg-black w-8 h-8 mx-auto flex justify-center flex-col">
+          {emoticon}
+        </span>
       </div>}
       <motion.svg
         animate={{ opacity: opacity }}

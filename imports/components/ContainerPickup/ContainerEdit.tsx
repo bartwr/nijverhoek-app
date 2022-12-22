@@ -124,6 +124,7 @@ export const ContainerEdit = ({
               <option value="halfvol">halfvol</option>
               <option value="leeg">leeg</option>
               <option value="weggehaald">weggehaald</option>
+              <option value="volgende-locatie">volgende locatie</option>
             </Select>
           </div>
         </div>
