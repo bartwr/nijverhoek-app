@@ -133,11 +133,27 @@ export const Progress = () => {
     {showOverlay && <ProgressForm onClose={() => {
       setShowOverlay(false);
     }} />}
-    <div className={`${isAllowedToShareProgress ? 'cursor-pointer' : ''} overflow-x-auto -mx-6`} onClick={() => {
+    <div className="-mt-2 mb-4">
+      De Nijverhoek is voor X% gesloopt
+    </div>
+    <div className={`${isAllowedToShareProgress ? 'cursor-pointer' : ''} overflow-x-auto overflow-y-hidden -mx-6`} onClick={() => {
       if(! isAllowedToShareProgress) return;
       setShowOverlay(true);
     }}>
       <ProgressSvg data={allProgress} width="100%" />
+      <div data-name="legend" className="flex justify-around mt-4">
+        <div className="h-2 w-4" style={{
+          backgroundColor: '#f1f1f1',
+          fontSize: '4px'
+        }}>0%</div>
+        <div className="bg-cover bg-no-repeat h-2 w-full" style={{
+          backgroundImage: `url('https://cloud.githubusercontent.com/assets/928116/16114032/70c167ea-33bf-11e6-9265-0e98f1ba805b.png')`
+        }} />
+        <div className="h-2 w-10" style={{
+          backgroundColor: '#309f00',
+          fontSize: '4px'
+        }}>100%</div>
+      </div>
     </div>
   </>
 }

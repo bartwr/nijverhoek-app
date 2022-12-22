@@ -23,6 +23,9 @@ function Icon({
      if(percentageDone == 0) {
         return '#eee';
      }
+     else if(percentageDone == 100) {
+        return '#309f00';
+     }
      else {
         return perc2color(percentageDone);
      }
