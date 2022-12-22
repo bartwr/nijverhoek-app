@@ -26,9 +26,7 @@ export const CheckInDone = () => {
 
   useEffect(() => {
     const houseNumber = localStorage.getItem('SLOOPHOEK__houseNumber');
-    if(houseNumber == '2' || houseNumber == '31') {
-      showNotification();
-    }
+    showNotification();
 
     const TO = setTimeout(() => {
       FlowRouter.go('index')
