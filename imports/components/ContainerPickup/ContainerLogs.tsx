@@ -52,6 +52,7 @@ export const ContainerLogs = ({
             <td align="left">
               {x.containerType && x.containerType === 'bouw-en-sloop' ? 'B&S' : ''}
               {x.containerType && x.containerType === 'houtafval-b' ? 'Hout' : ''}
+              {x.containerType && x.containerType === 'groenafval' ? 'Groen' : ''}
             </td>
             <td align="left">
               {x.status && x.status === 'doorgegeven-aan-renewi' ? 'doorgegeven' : x.status}

@@ -65,7 +65,7 @@ export const ContainerPickup = () => {
   },
   {
     containerPositionNumber: 4,
-    left: '32%'
+    left: '31.9%'
   },
   {
     containerPositionNumber: 5,
@@ -126,19 +126,19 @@ export const ContainerPickup = () => {
   {
     containerPositionNumber: 17,
     left: '76%',
-    top: '27.7%',
+    top: '16%',
     rotate: '67deg',
   },
   {
     containerPositionNumber: 18,
     left: '78.5%',
-    top: '30.5%',
+    top: '19.7%',
     rotate: '67deg',
   },
   {
     containerPositionNumber: 19,
     left: '81%',
-    top: '33.4%',
+    top: '23.5%',
     rotate: '67deg',
   }]
 
@@ -162,8 +162,8 @@ export const ContainerPickup = () => {
             <motion.div key={x.containerPositionNumber} style={{
               position: 'absolute',
               left: x.left,
-              top: x.top || '49.5%',
-              width: '6vh',
+              top: x.top || '43.8%',
+              width: '8vh',
             }}
             className="cursor-pointer"
             onClick={() => {
@@ -180,7 +180,7 @@ export const ContainerPickup = () => {
             </motion.div>
           </>
         })}
-        <img src="/images/components/ContainerPickup/map-v2.png?0" alt="Container map"
+        <img src="/images/components/ContainerPickup/map-v3.png?0" alt="Container map"
           className="ContainerPickup-map block"
           id="js-ContainerPickup-map"
           style={{
@@ -189,6 +189,37 @@ export const ContainerPickup = () => {
             height: '100%',
           }}
         />
+
+        <div data-type="banner" className="opacity-75 text-center text-xs absolute bg-red top-0 text-white flex flex-col justify-center" style={{
+          top: '42.33%',
+          left: '46.25%',
+          background: '#ff000d',
+          width: '76px',
+          height: '19px',
+        }}>
+          Klussen
+        </div>
+
+        <div data-type="banner" className="opacity-75 text-center text-xs absolute bg-red top-0 text-white flex flex-col justify-center" style={{
+          top: '42.33%',
+          left: '52.92%',
+          background: '#ff000d',
+          width: '76px',
+          height: '19px',
+        }}>
+          in De
+        </div>
+
+        <div data-type="banner" className="opacity-75 text-center text-xs absolute bg-red top-0 text-white flex flex-col justify-center" style={{
+          top: '42.33%',
+          left: '58.7%',
+          background: '#ff000d',
+          width: '76px',
+          height: '19px',
+        }}>
+          Nijverhoek
+        </div>
+
       </div>
 
       {/*
