@@ -136,6 +136,7 @@ export const ContainerEdit = ({
               <option value="">?</option>
               <option value="bouw-en-sloop">Bouw&Sloop</option>
               <option value="houtafval-b">Houtafval</option>
+              <option value="groenafval">Groenafval</option>
             </Select>
           </div>
           <div>

@@ -23,7 +23,7 @@ export const Overlay = ({
       px-6
     "
     style={{
-      zIndex: 20
+      zIndex: 100
     }}
     >
       <div className="

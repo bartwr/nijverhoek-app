@@ -66,6 +66,9 @@ export const Container = ({
     else if(containerType === 'houtafval-b') {
       return '🪵';
     }
+    else if(containerType === 'groenafval') {
+      return '🌴';
+    }
   }
 
   return (
