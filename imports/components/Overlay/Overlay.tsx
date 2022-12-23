@@ -49,6 +49,8 @@ export const Overlay = ({
         text-black
         bg-white
         p-4
+        overflow-y-auto
+        max-h-full
       ">
         <Title>
           {title}

@@ -142,6 +142,17 @@ export const ContainerPickup = () => {
     rotate: '67deg',
   }]
 
+  const Banner = ({style, children}) => (
+    <div data-type="banner" className="overflow-hidden opacity-90 text-center absolute bg-red top-0 text-white flex flex-col justify-center" style={Object.assign({}, {
+      background: '#ff000d',
+      width: '6.4vh',
+      height: '1.6vh',
+      fontSize: '1vh'
+    }, style)}>
+      {children}
+    </div>
+  );
+
   return <LayoutWithLogo>
     {/*OVERLAY*/}
     {clickedPositionNumber ? <ContainerEdit
@@ -190,38 +201,26 @@ export const ContainerPickup = () => {
           }}
         />
 
-        <div data-type="banner" className="overflow-hidden opacity-90 text-center text-xs absolute bg-red top-0 text-white flex flex-col justify-center" style={{
+        <Banner style={{
           top: '42.33%',
-          left: '46.25%',
-          background: '#ff000d',
-          width: '6.4vh',
-          height: '1.6vh',
-          fontSize: '8px'
+          left: '46.25%'
         }}>
           Klussen
-        </div>
+        </Banner>
 
-        <div data-type="banner" className="overflow-hidden opacity-90 text-center text-xs absolute bg-red top-0 text-white flex flex-col justify-center" style={{
+        <Banner style={{
           top: '42.33%',
           left: '52.92%',
-          background: '#ff000d',
-          width: '6.4vh',
-          height: '1.6vh',
-          fontSize: '8px'
         }}>
           in De
-        </div>
+        </Banner>
 
-        <div data-type="banner" className="overflow-hidden opacity-90 text-center text-xs absolute bg-red top-0 text-white flex flex-col justify-center" style={{
+        <Banner style={{
           top: '42.33%',
           left: '58.7%',
-          background: '#ff000d',
-          width: '6.4vh',
-          height: '1.6vh',
-          fontSize: '8px'
         }}>
           Nijverhoek
-        </div>
+        </Banner>
 
       </div>
 

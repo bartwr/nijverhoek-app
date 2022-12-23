@@ -74,16 +74,17 @@ export const Container = ({
   return (
     <div className="relative">
       {containerStatus && containerStatus.containerType && <div className={`
-        absolute top-0 right-0 bottom-0 left-0 flex flex-col text-center justify-center text-base lg:text-lg xl:text-lg
-        ${containerStatus.containerSize != 40 ? '-ml-2' : ''}
+        Container-icon
+        absolute top-0 right-0 bottom-0 left-0 flex flex-col text-center justify-center landscape:text-xs portrait:text-base
+        ${containerStatus.containerSize != 40 ? 'portrait:-ml-1' : ''}
       `}>
         {getIcon(containerStatus.containerType)}
       </div>}
       {emoticon && <div className={`
-        absolute top-0 right-0 bottom-0 left-0 flex flex-col text-center justify-center text-base lg:text-lg xl:text-lg
-        ${containerStatus.containerSize != 40 ? '-ml-2' : ''}
+        absolute top-0 right-0 bottom-0 left-0 flex flex-col text-center justify-center landscape:text-xs portrait:text-base
+        ${containerStatus.containerSize != 40 ? 'portrait:-ml-1' : ''}
       `}>
-        <span className="rounded-full bg-black w-8 h-8 mx-auto flex justify-center flex-col">
+        <span className="rounded-full bg-black portrait:w-8 portrait:h-8 landscape:w-4 landscape:h-4 mx-auto flex justify-center flex-col">
           {emoticon}
         </span>
       </div>}
