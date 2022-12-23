@@ -7,10 +7,12 @@ Meteor.methods({
   // 
   'containers.addProgress': function({
     submittedByHouseNumber,
-    percentage
+    percentage,
+    agreedOn100pctBySloopteam
   }: {
     submittedByHouseNumber: number,
-    percentage: number
+    percentage: number,
+    agreedOn100pctBySloopteam: any
   }) {
     if(! submittedByHouseNumber) return;
 
@@ -20,7 +22,8 @@ Meteor.methods({
     }, {
       dt_created: moment().toISOString(),
       submittedByHouseNumber: submittedByHouseNumber,
-      percentage: percentage
+      percentage: percentage,
+      agreedOn100pctBySloopteam: agreedOn100pctBySloopteam
     })
   },
   // 

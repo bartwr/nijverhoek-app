@@ -17,10 +17,25 @@ function Icon({
      }
   }
 
+  const getAgreedOnValue = (houseNumber) => {
+     const found = data.filter(x => {
+        return x.submittedByHouseNumber == houseNumber
+     });
+     if(found && found[0]) {
+        return found[0].agreedOn100pctBySloopteam;
+     } else {
+        return false;
+     }
+  }
+
   const getFillColor = (houseNumber) => {
      const percentageDone = getPercentageDone(houseNumber);
+     const agreedOn100pctBySloopteam = getAgreedOnValue(houseNumber);
 
-     if(percentageDone == 0) {
+     if(agreedOn100pctBySloopteam) {
+        return '#008bf2';
+     }
+     else if(percentageDone == 0) {
         return '#eee';
      }
      else if(percentageDone == 100) {
