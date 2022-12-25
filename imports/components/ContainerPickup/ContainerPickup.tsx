@@ -381,6 +381,12 @@ export const ContainerPickup = () => {
         Containers
       </Title>
 
+      <p className="my-4" style={{
+        textShadow: 'white 0 0 3px'
+      }}>
+        Volgende wissel: dinsdag 27 dec
+      </p>
+
     </div>
   </LayoutWithLogo>
 }
