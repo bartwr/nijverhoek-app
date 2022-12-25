@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion"
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
+import moment from 'moment';
 
 import {Title} from '../Title/Title.tsx';
 import {Select} from '../Form/Select.tsx';
@@ -221,6 +222,27 @@ export const ContainerPickup = () => {
         }}>
           Nijverhoek
         </Banner>
+
+        {(moment().format('MM-DD') == '12-25' || moment().format('MM-DD') == '12-26') && <div className="fixed" style={{
+          top: '59.3vh',
+          left: '38.7%',
+        }}>
+          <img src="/images/components/ContainerPickup/theme-elements/christmas/santa-claus-orange.png" alt="Santa Claus" style={{width: '5vh'}} />
+        </div>}
+
+        {(moment().format('MM-DD') == '12-31') && <div className="fixed" style={{
+          top: '59.3vh',
+          left: '38.7%',
+        }}>
+          <img src="/images/components/ContainerPickup/theme-elements/fireworks/fireworks.svg" alt="Vuurwerk" style={{width: '5vh'}} />
+        </div>}
+
+        {(moment().format('MM-DD') == '01-01') && <div className="absolute" style={{
+          top: '77.2vh',
+          left: '27.1%',
+        }}>
+          <img src="/images/components/ContainerPickup/theme-elements/champaign/champaign.svg" alt="Champagne" style={{width: '8vh'}} />
+        </div>}
 
       </div>
 
