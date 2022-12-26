@@ -119,8 +119,8 @@ export const Household = ({children}: {
       </div>}
 
       <motion.div
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+      whileHover={isAllowedToViewNames ? { scale: 1.1 } : {}}
+      whileTap={isAllowedToViewNames ? { scale: 0.9 } : {}}
       className="
         rounded-xl
         p-2
@@ -160,9 +160,9 @@ export const Household = ({children}: {
           h-2
         " />}
 
-        <span className="block" style={{
+        <span className="block" style={isAllowedToViewNames ? {
           color: '#fb2a00'
-        }}>
+        } : {}}>
           {children}
         </span>
       </motion.div>
