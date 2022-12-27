@@ -56,10 +56,10 @@ export const ContainerPickup = () => {
     containerPositionNumber: 1,
     left: '23%'
   },
-  {
-    containerPositionNumber: 2,
-    left: '25.2%'
-  },
+  // {
+  //   containerPositionNumber: 2,
+  //   left: '25.2%'
+  // },
   {
     containerPositionNumber: 3,
     left: '30%'
@@ -88,10 +88,10 @@ export const ContainerPickup = () => {
     containerPositionNumber: 9,
     left: '50%'
   },
-  {
-    containerPositionNumber: 10,
-    left: '52%'
-  },
+  // {
+  //   containerPositionNumber: 10,
+  //   left: '52%'
+  // },
   {
     containerPositionNumber: 11,
     left: '56.5%'
@@ -381,11 +381,11 @@ export const ContainerPickup = () => {
         Containers
       </Title>
 
-      <p className="my-4" style={{
+      {/*<p className="my-4" style={{
         textShadow: 'white 0 0 3px'
       }}>
         Volgende wissel: dinsdag 27 dec
-      </p>
+      </p>*/}
 
     </div>
   </LayoutWithLogo>
