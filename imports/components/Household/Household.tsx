@@ -113,7 +113,9 @@ export const Household = ({children}: {
         text-xl
         text-white
       " style={{
-        background: '#ea5c33'
+        background: '#ea5c33',
+        lineHeight: ((householdName.indexOf(' ') > -1 || householdName.length > 15) ? '14px' : null),
+        fontSize: ((householdName.indexOf(' ') > -1 || householdName.length > 15) ? '12px' : null)
       }}>
         {householdName}
       </div>}
@@ -161,7 +163,7 @@ export const Household = ({children}: {
         " />}
 
         <span className="block" style={isAllowedToViewNames ? {
-          color: '#fb2a00'
+          color: '#b11e00'
         } : {}}>
           {children}
         </span>
