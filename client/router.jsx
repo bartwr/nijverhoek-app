@@ -2,11 +2,14 @@ import React from 'react';
 import { render } from 'react-dom';
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import { App } from '/imports/ui/App';
+import { createRoot } from 'react-dom/client';
+
+const root = createRoot(document.getElementById("react-target"));
 
 const renderApp = (children) => {
-  render(<App>
+  root.render(<App>
     {children}
-  </App>, document.getElementById('react-target'));
+  </App>);
 }
 
 FlowRouter.route('/', {

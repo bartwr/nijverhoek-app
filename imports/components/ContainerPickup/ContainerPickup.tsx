@@ -14,6 +14,13 @@ import {ContainerEdit} from './ContainerEdit.tsx';
 export const ContainerPickup = () => {
 
   const [clickedPositionNumber, setClickedPositionNumber] = useState(undefined)
+  const [myHouseNumber, setMyHouseNumber] = useState()
+
+  // Set housenumber in state
+  useEffect(() => {
+    const houseNumber = parseInt(localStorage.getItem('SLOOPHOEK__houseNumber'));
+    setMyHouseNumber(houseNumber);
+  }, [])
 
   // Position containers well for Firefox, as Firefox does something
   // strange with when using `width: max-content`
@@ -48,11 +55,13 @@ export const ContainerPickup = () => {
 
   const containerPositions = [
   {
+    houseNumber: 1,
     containerPositionNumber: 20,
     left: '18%',
     rotate: '-18deg'
   },
   {
+    houseNumber: 4,
     containerPositionNumber: 1,
     left: '23%'
   },
@@ -61,6 +70,7 @@ export const ContainerPickup = () => {
   //   left: '25.2%'
   // },
   {
+    houseNumber: 7,
     containerPositionNumber: 3,
     left: '30%'
   },
@@ -69,6 +79,7 @@ export const ContainerPickup = () => {
     left: '31.9%'
   },
   {
+    houseNumber: 9,
     containerPositionNumber: 5,
     left: '36%'
   },
@@ -77,14 +88,17 @@ export const ContainerPickup = () => {
   //   left: '44.2%'
   // },
   {
+    houseNumber: 14,
     containerPositionNumber: 7,
     left: '43%'
   },
   {
+    houseNumber: 15,
     containerPositionNumber: 8,
     left: '45%'
   },
   {
+    houseNumber: 17,
     containerPositionNumber: 9,
     left: '50%'
   },
@@ -93,22 +107,27 @@ export const ContainerPickup = () => {
   //   left: '52%'
   // },
   {
+    houseNumber: 20,
     containerPositionNumber: 11,
     left: '56.5%'
   },
   {
+    houseNumber: 21,
     containerPositionNumber: 12,
     left: '58.5%'
   },
   {
+    houseNumber: 23,
     containerPositionNumber: 13,
     left: '63%'
   },
   {
+    houseNumber: 24,
     containerPositionNumber: 14,
     left: '65%'
   },
   {
+    houseNumber: 25,
     containerPositionNumber: 15,
     left: '70%'
   },
@@ -117,31 +136,59 @@ export const ContainerPickup = () => {
   //   left: '90.3%'
   // },
   {
+    houseNumber: 27,
     containerPositionNumber: 21,
     left: '76.5%'
   },
   {
+    houseNumber: 28,
     containerPositionNumber: 22,
     left: '79%'
   },
   {
+    houseNumber: 30,
     containerPositionNumber: 17,
     left: '76%',
     top: '16%',
     rotate: '67deg',
   },
   {
+    houseNumber: 29,
     containerPositionNumber: 18,
     left: '78.5%',
     top: '19.7%',
     rotate: '67deg',
   },
   {
+    houseNumber: 28,
     containerPositionNumber: 19,
     left: '81%',
     top: '23.5%',
     rotate: '67deg',
   }]
+
+  // Auto scroll to users houseNumber (on component load)
+  useEffect(() => {
+    if(! myHouseNumber) return;
+
+    // Get 'scroll left' position for housenumber
+    let scrollLeftPercentage = 0;
+    containerPositions.map((x) => {
+      if(scrollLeftPercentage > 0) return;
+
+      if(x.houseNumber && (x.houseNumber === myHouseNumber || x.houseNumber > myHouseNumber)) {
+        scrollLeftPercentage = parseInt(x.left.replace('%', ''));
+      }
+    });
+
+    if(myHouseNumber >= 31) scrollLeftPercentage = 76;
+
+    const mapWidth = document.getElementById('js-ContainerPickup-map').width;
+    const scrollLeftInPixels = (mapWidth / 100 * scrollLeftPercentage) - 150;
+
+    // Scroll to position
+    document.getElementById('js-ContainerPickup').scroll(scrollLeftInPixels, 0);
+  }, [myHouseNumber])
 
   const Banner = ({style, children}) => (
     <div data-type="banner" className="overflow-hidden opacity-90 text-center absolute bg-red top-0 text-white flex flex-col justify-center" style={Object.assign({}, {
@@ -164,7 +211,7 @@ export const ContainerPickup = () => {
     /> : ''}
 
     {/*CONTAINER MAP*/}
-    <div className="fixed z-1 top-0 left-0 bottom-0 left-0 w-full overflow-x-auto">
+    <div id="js-ContainerPickup" className="fixed z-1 top-0 left-0 bottom-0 left-0 w-full overflow-x-auto">
       <div className="relative" style={{
           width: 'max-content',
           height: '100%',
