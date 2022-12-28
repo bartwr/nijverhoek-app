@@ -206,7 +206,10 @@ export const ContainerPickup = () => {
     const scrollLeftInPixels = (mapWidth / 100 * scrollLeftPercentage) - 150;
 
     // Scroll to position
-    document.getElementById('js-ContainerPickup').scroll(scrollLeftInPixels, 0);
+    document.getElementById('js-ContainerPickup').scroll({
+      left: scrollLeftInPixels,
+      behavior: "smooth"
+    });
   }, [myHouseNumber])
 
   const Banner = ({style, children}) => (
@@ -230,7 +233,13 @@ export const ContainerPickup = () => {
     /> : ''}
 
     {/*CONTAINER MAP*/}
-    <div id="js-ContainerPickup" className="fixed z-1 top-0 left-0 bottom-0 left-0 w-full overflow-x-auto">
+    <motion.div
+      id="js-ContainerPickup"
+      className="fixed z-1 top-0 left-0 bottom-0 left-0 w-full overflow-x-auto"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.75, duration: 0.5 }}
+    >
       <div className="relative" style={{
           width: 'max-content',
           height: '100%',
@@ -443,7 +452,7 @@ export const ContainerPickup = () => {
       </div>
     */}
 
-    </div>
+    </motion.div>
 
     {/*LEGEND*/}
     <div className="fixed z-2 bottom-0 left-0 w-full overflow-x-auto">
