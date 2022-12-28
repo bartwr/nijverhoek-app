@@ -162,9 +162,7 @@ export const Household = ({children}: {
           h-2
         " />}
 
-        <span className="block" style={isAllowedToViewNames ? {
-          color: '#b11e00'
-        } : {}}>
+        <span className="block">
           {children}
         </span>
       </motion.div>

@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion"
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
+import { useTracker } from 'meteor/react-meteor-data';
 import moment from 'moment';
 
 import {Title} from '../Title/Title.tsx';
@@ -10,11 +11,29 @@ import {Button} from '../Button/Button.tsx';
 import {LayoutWithLogo} from '../LayoutWithLogo/LayoutWithLogo.tsx';
 import {Container} from './Container';
 import {ContainerEdit} from './ContainerEdit.tsx';
+import ProgressSvg from '../Progress/ProgressSvg';
+
+// Models
+import { Progress as ProgressModel } from '/imports/models/Progress';
 
 export const ContainerPickup = () => {
 
   const [clickedPositionNumber, setClickedPositionNumber] = useState(undefined)
   const [myHouseNumber, setMyHouseNumber] = useState()
+
+  // Get all progress
+  const { allProgress, isLoading } = useTracker(() => {
+    const subscription = Meteor.subscribe('progress.all');
+
+    const progress = ProgressModel.find({}, {
+      sort: {dt_created: -1},
+    }).fetch();
+
+    return {
+      allProgress: progress,
+      isLoading: ! subscription.ready(),
+    }
+  }, []);
 
   // Set housenumber in state
   useEffect(() => {
@@ -290,6 +309,17 @@ export const ContainerPickup = () => {
         }}>
           <img src="/images/components/ContainerPickup/theme-elements/champaign/champaign.svg" alt="Champagne" style={{width: '8vh'}} />
         </div>}
+
+        <div className="
+          ContainerPickup-ProgressSvg
+          absolute
+        " style={{
+            top: '11vh',
+            width: '177.2vh',
+            left: '47.6vh'
+        }}>
+          <ProgressSvg data={allProgress} width="100%" />
+        </div>
 
       </div>
 

@@ -7,6 +7,8 @@ function Icon({
    width
 }) {
   const getPercentageDone = (houseNumber) => {
+    if(! data) return 0;
+
      const found = data.filter(x => {
         return x.submittedByHouseNumber == houseNumber
      });
@@ -18,6 +20,8 @@ function Icon({
   }
 
   const getAgreedOnValue = (houseNumber) => {
+    if(! data) return false;
+
      const found = data.filter(x => {
         return x.submittedByHouseNumber == houseNumber
      });
@@ -46,7 +50,7 @@ function Icon({
      }
   }
 
-  const opacity = "0.8";
+  const opacity = "1";
 
   return (
     <svg
@@ -1769,7 +1773,7 @@ function Icon({
             inlineSize: "0",
             InkscapeStroke: "none",
           }}
-          x="333"
+          x="338"
           y="285.346"
           fill="#000"
           fillOpacity="1"
@@ -1794,7 +1798,7 @@ function Icon({
           writingMode="lr-tb"
         >
           <tspan
-            x="333"
+            x="338"
             y="285.346"
             style={{
               lineHeight: "1.25",
@@ -1889,7 +1893,7 @@ function Icon({
             inlineSize: "0",
             InkscapeStroke: "none",
           }}
-          x="336"
+          x="341"
           y="285.346"
           fill="#000"
           fillOpacity="1"
@@ -1914,7 +1918,7 @@ function Icon({
           writingMode="lr-tb"
         >
           <tspan
-            x="336"
+            x="341"
             y="285.346"
             style={{
               lineHeight: "1.25",
@@ -2129,7 +2133,7 @@ function Icon({
             inlineSize: "0",
             InkscapeStroke: "none",
           }}
-          x="336"
+          x="338"
           y="285.346"
           fill="#000"
           fillOpacity="1"
@@ -2154,7 +2158,7 @@ function Icon({
           writingMode="lr-tb"
         >
           <tspan
-            x="336"
+            x="338"
             y="285.346"
             style={{
               lineHeight: "1.25",
@@ -2369,7 +2373,7 @@ function Icon({
             inlineSize: "0",
             InkscapeStroke: "none",
           }}
-          x="336"
+          x="340"
           y="285.346"
           fill="#000"
           fillOpacity="1"
@@ -2394,7 +2398,7 @@ function Icon({
           writingMode="lr-tb"
         >
           <tspan
-            x="336"
+            x="340"
             y="285.346"
             style={{
               lineHeight: "1.25",
