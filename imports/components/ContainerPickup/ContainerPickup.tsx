@@ -244,6 +244,18 @@ export const ContainerPickup = () => {
           width: 'max-content',
           height: '100%',
         }}>
+
+        <div className="
+          ContainerPickup-ProgressSvg
+          absolute
+        " style={{
+            top: '11vh',
+            width: '177.2vh',
+            left: '47.6vh'
+        }}>
+          <ProgressSvg data={allProgress} width="100%" />
+        </div>
+
         {containerPositions.map((x) => {
           return <>
             <motion.div key={x.containerPositionNumber} style={{
@@ -267,6 +279,7 @@ export const ContainerPickup = () => {
             </motion.div>
           </>
         })}
+
         <img src="/images/components/ContainerPickup/map-v3.png?0" alt="Container map"
           className="ContainerPickup-map block"
           id="js-ContainerPickup-map"
@@ -318,17 +331,6 @@ export const ContainerPickup = () => {
         }}>
           <img src="/images/components/ContainerPickup/theme-elements/champaign/champaign.svg" alt="Champagne" style={{width: '8vh'}} />
         </div>}
-
-        <div className="
-          ContainerPickup-ProgressSvg
-          absolute
-        " style={{
-            top: '11vh',
-            width: '177.2vh',
-            left: '47.6vh'
-        }}>
-          <ProgressSvg data={allProgress} width="100%" />
-        </div>
 
       </div>
 
