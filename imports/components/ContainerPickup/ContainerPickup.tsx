@@ -208,7 +208,7 @@ export const ContainerPickup = () => {
     // Scroll to position
     document.getElementById('js-ContainerPickup').scroll({
       left: scrollLeftInPixels,
-      behavior: "smooth"
+      // behavior: "smooth"
     });
   }, [myHouseNumber])
 
@@ -238,7 +238,7 @@ export const ContainerPickup = () => {
       className="fixed z-1 top-0 left-0 bottom-0 left-0 w-full overflow-x-auto"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.75, duration: 0.5 }}
+      transition={{ delay: 0.4, duration: 0.5 }}
     >
       <div className="relative" style={{
           width: 'max-content',
