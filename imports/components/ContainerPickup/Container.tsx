@@ -87,9 +87,9 @@ export const Container = ({
         absolute top-0 right-0 bottom-0 left-0 flex flex-col text-center justify-center landscape:text-xs portrait:text-base
         ${containerStatus.containerSize != 40 ? 'portrait:-ml-1' : ''}
       `}>
-        <span className="rounded-full bg-black portrait:w-8 portrait:h-8 landscape:w-4 landscape:h-4 mx-auto flex justify-center flex-col" style={{
+        <span className={`rounded-full bg-black portrait:${containerStatus.containerSize === 40 ? 'w-10' : 'w-8'} portrait:${containerStatus.containerSize === 40 ? 'h-10' : 'h-8'} landscape:${containerStatus.containerSize === 40 ? 'w-7' : 'w-6'} landscape:${containerStatus.containerSize === 40 ? 'h-7' : 'h-6'} mx-auto flex justify-center flex-col`} style={{
           backgroundColor: '#ffeb3b',
-          border: 'solid #000 2px'
+          border: `solid #000 ${containerStatus.containerSize === 40 ? '4px' : '2px'}`
         }}>
           {emoticon}
         </span>

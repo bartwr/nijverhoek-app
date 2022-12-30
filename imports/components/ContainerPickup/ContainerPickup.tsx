@@ -121,10 +121,10 @@ export const ContainerPickup = () => {
     containerPositionNumber: 9,
     left: '50%'
   },
-  // {
-  //   containerPositionNumber: 10,
-  //   left: '52%'
-  // },
+  {
+    containerPositionNumber: 10,
+    left: '52%'
+  },
   {
     houseNumber: 20,
     containerPositionNumber: 11,
