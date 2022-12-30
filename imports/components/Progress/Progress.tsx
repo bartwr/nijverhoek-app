@@ -93,13 +93,15 @@ const ProgressForm = ({
         </Select>
       </div>
 
-      {isInSloopTeam(myHouseNumber) && <label className="my-8 block">
-        <span className="ml-2 inline-block">100% gereed volgens Sloopteam:</span><br />
-        <input type="checkbox" id="js-checked" name="checked" className="mt-4 inline-block" style={{
+      <label className={isInSloopTeam(myHouseNumber) ? `my-8 block` : ``}>
+        <span className="ml-2 inline-block" style={{
+          display: isInSloopTeam(myHouseNumber) ? 'block' : 'none'
+        }}>100% gereed volgens Sloopteam:<br /></span>
+        <input type={isInSloopTeam(myHouseNumber) ? 'checkbox' : 'hidden'} id="js-checked" name="checked" className="mt-4 inline-block" style={{
           width: '30px',
           height: '30px'
         }} />
-      </label>}
+      </label>
 
       <div className="my-4">
         <Button onClick={onSubmit} id="js-ContainerPickup-button">
@@ -153,8 +155,11 @@ export const Progress = () => {
     {showOverlay && <ProgressForm onClose={() => {
       setShowOverlay(false);
     }} />}
-    <div className="-mt-2 mb-4 text-sm">
-      De Nijverhoek is voor {Math.round(totalProgress)}% gesloopt
+    <div className="-mt-2 mb-4 text-sm" onClick={() => {
+      if(! isAllowedToShareProgress) return;
+      setShowOverlay(true);
+    }}>
+      De Nijverhoek is voor {Math.round(totalProgress)}% gesloopt.<br />Hoe ver ben jij? Klik hier:
     </div>
     <div className={`${isAllowedToShareProgress ? 'cursor-pointer' : ''} overflow-x-auto overflow-y-hidden -mx-6`} onClick={() => {
       if(! isAllowedToShareProgress) return;
