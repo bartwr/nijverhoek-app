@@ -35,6 +35,21 @@ export const Container = ({
     }
   }, []);
 
+  const getIcon = (containerType) => {
+    if(containerType === 'bouw-en-sloop') {
+      return '⚒️';
+    }
+    else if(containerType === 'houtafval-b') {
+      return '🪵';
+    }
+    else if(containerType === 'groenafval') {
+      return '🌴';
+    }
+    else if(containerType === 'tegels') {
+      return '◻️';
+    }
+  }
+
   let fillColor = '#ccc', opacity = 1, emoticon;
   if(containerStatus && containerStatus.status === 'vol') {
     fillColor = '#f01301';
@@ -55,21 +70,9 @@ export const Container = ({
   else if(containerStatus && containerStatus.status === 'volgende-locatie') {
     fillColor = 'transparent';
     opacity = 0.2;
-    emoticon = '🌟';
+    emoticon = getIcon(containerStatus.containerType);
   }
   // console.log('containerStatus', containerStatus)
-
-  const getIcon = (containerType) => {
-    if(containerType === 'bouw-en-sloop') {
-      return '⚒️';
-    }
-    else if(containerType === 'houtafval-b') {
-      return '🪵';
-    }
-    else if(containerType === 'groenafval') {
-      return '🌴';
-    }
-  }
 
   return (
     <div className="relative">
@@ -84,7 +87,10 @@ export const Container = ({
         absolute top-0 right-0 bottom-0 left-0 flex flex-col text-center justify-center landscape:text-xs portrait:text-base
         ${containerStatus.containerSize != 40 ? 'portrait:-ml-1' : ''}
       `}>
-        <span className="rounded-full bg-black portrait:w-8 portrait:h-8 landscape:w-4 landscape:h-4 mx-auto flex justify-center flex-col">
+        <span className="rounded-full bg-black portrait:w-8 portrait:h-8 landscape:w-4 landscape:h-4 mx-auto flex justify-center flex-col" style={{
+          backgroundColor: '#ffeb3b',
+          border: 'solid #000 2px'
+        }}>
           {emoticon}
         </span>
       </div>}

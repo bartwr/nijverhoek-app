@@ -137,12 +137,14 @@ export const ContainerEdit = ({
               <option value="bouw-en-sloop">Bouw&Sloop</option>
               <option value="houtafval-b">Houtafval</option>
               <option value="groenafval">Groenafval</option>
+              <option value="tegels">Tegels</option>
             </Select>
           </div>
           <div>
             en grootte<br /><br />
             <Select name="containerSize" id="js-containerSize" style={{textAlign: 'center'}}>
               <option value="">?</option>
+              <option value={15}>15 m3</option>
               <option value={20}>20 m3</option>
               <option value={40}>40 m3</option>
             </Select>
