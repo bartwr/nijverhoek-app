@@ -103,12 +103,15 @@ export const Container = ({
           {emoticon}
           <div className="
             absolute
-            text-md
+            text-xs
           " style={{
-            top: '-4.1vh',
+            top: '-3.9vh',
             left: '-8px',
             color: '#4300ff',
-            textShadow: '0px -1px 1px white'
+            textShadow: '0px -1px 1px white',
+            background: '#fff',
+            padding: '0 2px'
+            zIndex: 20,
           }}>
             {containerStatus.containerSize || '20'}m3
           </div>
