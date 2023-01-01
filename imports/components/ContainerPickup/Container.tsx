@@ -107,7 +107,7 @@ export const Container = ({
             absolute
             text-xs
           " style={{
-            top: (containerStatus.containerSize && containerStatus.containerSize === 40 ? '-3.7vh' : '-3.9vh'),
+            top: (containerStatus.containerSize && containerStatus.containerSize === 40 ? '7.5vh' : '7.37vh'),
             left: '-4px',
             color: '#4300ff',
             background: '#fff',
