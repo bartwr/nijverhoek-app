@@ -9,6 +9,7 @@ const LegendItem = ({
     <span className="flex flex-col justify-center">
       {icon}
     </span> <span className="
+      ml-1
       flex flex-col justify-center
       font-bold
       uppercase
