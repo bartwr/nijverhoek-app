@@ -81,7 +81,7 @@ export const Container = ({
         absolute top-0 right-0 bottom-0 left-0 flex flex-col text-center justify-center landscape:text-xs portrait:text-base
         ${containerStatus.containerSize != 40 ? 'portrait:-ml-1' : ''}
       `} style={{
-          textShadow: '0px -1px 0.25px #fff'
+        textShadow: '2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff',
       }}>
         {getIcon(containerStatus.containerType)}
       </div>}
@@ -105,15 +105,17 @@ export const Container = ({
             absolute
             text-xs
           " style={{
-            top: '-3.9vh',
-            left: '-8px',
+            top: (containerStatus.containerSize && containerStatus.containerSize === 40 ? '-3.7vh' : '-3.9vh'),
+            left: '-4px',
             color: '#4300ff',
-            textShadow: '0px -1px 1px white',
+            textShadow: '2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff',
             background: '#fff',
+            borderLeft: 'solid 1px #4300ff',
+            borderRight: 'solid 1px #4300ff',
             padding: '0 2px'
             zIndex: 20,
           }}>
-            {containerStatus.containerSize || '20'}m3
+            {containerStatus.containerSize || '20'}<span style={{fontSize: '10px'}}>m3</span>
           </div>
         </span>
       </div>}
