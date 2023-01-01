@@ -12,6 +12,8 @@ import {ContainerLogs} from './ContainerLogs.tsx';
 
 import './ContainerEdit.css';
 
+const myHouseNumber = parseInt(localStorage.getItem('SLOOPHOEK__houseNumber'));
+
 export const ContainerEdit = ({
   containerPositionNumber,
   onClose
@@ -90,6 +92,15 @@ export const ContainerEdit = ({
         if(err) return;
       }
     );
+  }
+
+  const isInSloopTeam = (houseNumber) => {
+    const sloopTeamMembers = [2, 3, 17, 31];
+    return sloopTeamMembers.indexOf(houseNumber) > -1;
+  }
+
+  if((containerStatus && containerStatus.status === 'volgende-locatie') && ! isInSloopTeam(myHouseNumber)) {
+    return <></>
   }
 
   return (

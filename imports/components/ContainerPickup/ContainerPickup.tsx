@@ -246,7 +246,7 @@ export const ContainerPickup = () => {
           height: '100%',
         }}>
 
-        <div className="
+        {/*<div className="
           ContainerPickup-ProgressSvg
           absolute
         " style={{
@@ -255,7 +255,7 @@ export const ContainerPickup = () => {
             left: '47.6vh'
         }}>
           <ProgressSvg data={allProgress} width="100%" />
-        </div>
+        </div>*/}
 
         {containerPositions.map((x) => {
           return <>
