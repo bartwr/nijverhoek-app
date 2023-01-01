@@ -100,8 +100,10 @@ export const Container = ({
           border: `solid #000 ${containerStatus.containerSize === 40 ? '4px' : '2px'}`,
           textShadow: '2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff'
         }}>
+
           {emoticon}
-          <div className="
+
+          {document.location.pathname === '/renewi' && <div className="
             absolute
             text-xs
           " style={{
@@ -116,7 +118,8 @@ export const Container = ({
             whiteSpace: 'nowrap'
           }}>
             <span className="inline-block">{containerStatus.containerSize || '20'}</span><span className="inline-block" style={{marginLeft: '0.5px', fontSize: '10px'}}>m3</span>
-          </div>
+          </div>}
+
         </span>
       </div>}
       <motion.svg
