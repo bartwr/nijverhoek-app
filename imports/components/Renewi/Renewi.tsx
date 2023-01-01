@@ -15,6 +15,43 @@ import {Legend} from '../ContainerPickup/Legend.tsx';
 
 export const Renewi = () => {
 
+  // Dynamically set manifest file, for custom PWA app icon/URL
+  useEffect(() => {
+    var myRenewiDynamicManifest = {
+      "short_name": "Nijverhoek",
+      "name": "Nijverhoek app",
+      "start_url": "/renewi",
+      "display": "standalone",
+      "icons": [
+        {
+          "src": "/images/icons-sloophoek-512.png",
+          "type": "image/png",
+          "sizes": "512x512",
+          "purpose": "any"
+        },
+        {
+          "src": "/images/icons-sloophoek-192.png",
+          "type": "image/png",
+          "sizes": "192x192",
+          "purpose": "maskable"
+        },
+        {
+          "src": "/images/icons-sloophoek-512.png",
+          "type": "image/png",
+          "sizes": "512x512",
+          "purpose": "maskable"
+        }
+      ],
+      "background_color": "#f85838",
+      "scope": "/renewi",
+      "theme_color": "#f85838"
+    }
+    const stringManifest = JSON.stringify(myRenewiDynamicManifest);
+    const blob = new Blob([stringManifest], {type: 'application/json'});
+    const manifestURL = URL.createObjectURL(blob);
+    document.querySelector('#my-manifest-placeholder').setAttribute('href', manifestURL);
+  }, []);
+
   // Position containers well for Firefox, as Firefox does something
   // strange with when using `width: max-content`
   useEffect(() => {

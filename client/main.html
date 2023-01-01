@@ -22,7 +22,7 @@
   <meta name="application-name" content="Nijverhoek">
   <meta name="viewport" content="initial-scale=1, maximum-scale=5, minimum-scale=-5"/>
   <meta name="theme-color" content="#f85838">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" id="my-manifest-placeholder">
   <link rel="shortcut icon" type="image/png" href="https://app.nijverhoek.nl/images/icons-sloophoek-192?v2" sizes="192x192">
   <link rel="apple-touch-icon" sizes="192x192" href="https://app.nijverhoek.nl/images/icons-sloophoek-192.png">
   <link rel="fluid-icon" href="https://app.nijverhoek.nl/images/icons-sloophoek-512.png?v2" title="app icon">
@@ -37,6 +37,43 @@
       r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
       a.appendChild(r);
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- Dynamically populate manifest -->
+  <script type="text/javascript">
+  var myGeneralDynamicManifest = {
+    "short_name": "Nijverhoek",
+    "name": "Nijverhoek app",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "/images/icons-sloophoek-512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any"
+      },
+      {
+        "src": "/images/icons-sloophoek-192.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "maskable"
+      },
+      {
+        "src": "/images/icons-sloophoek-512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "maskable"
+      }
+    ],
+    "background_color": "#f85838",
+    "scope": "/",
+    "theme_color": "#f85838"
+  }
+  const stringManifest = JSON.stringify(myGeneralDynamicManifest);
+  const blob = new Blob([stringManifest], {type: 'application/json'});
+  const manifestURL = URL.createObjectURL(blob);
+  document.querySelector('#my-manifest-placeholder').setAttribute('href', manifestURL);
   </script>
 
   <noscript>
