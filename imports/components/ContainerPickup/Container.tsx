@@ -81,7 +81,7 @@ export const Container = ({
         absolute top-0 right-0 bottom-0 left-0 flex flex-col text-center justify-center landscape:text-xs portrait:text-base
         ${containerStatus.containerSize != 40 ? 'portrait:-ml-1' : ''}
       `} style={{
-        textShadow: '2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff'
+        textShadow: '1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff, 0.5px 0.5px #fff, -0.5px -0.5px #fff, 0.5px -0.5px #fff, -0.5px 0.5px #fff'
       }}>
         {getIcon(containerStatus.containerType)}
       </div>}
@@ -97,8 +97,8 @@ export const Container = ({
           relative
         `} style={{
           backgroundColor: '#4300ff',
-          border: `solid #000 ${containerStatus.containerSize === 40 ? '4px' : '2px'}`,
-          textShadow: '2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff'
+          border: `solid #000 ${containerStatus.containerSize === 40 ? '2px' : '2px'}`,
+          textShadow: '1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff, 0.5px 0.5px #fff, -0.5px -0.5px #fff, 0.5px -0.5px #fff, -0.5px 0.5px #fff'
         }}>
 
           {emoticon}
@@ -107,11 +107,11 @@ export const Container = ({
             absolute
             text-xs
           " style={{
-            top: (containerStatus.containerSize && containerStatus.containerSize === 40 ? '7.5vh' : '7.37vh'),
-            left: '-4px',
+            top: (containerStatus.containerSize && containerStatus.containerSize === 40 ? '7.6vh' : '7.37vh'),
+            left: '-6px',
             color: '#4300ff',
             background: '#fff',
-            // borderLeft: 'solid 1px #4300ff',
+            borderLeft: 'solid 1px #4300ff',
             // borderRight: 'solid 1px #4300ff',
             padding: '0 2px'
             zIndex: 20,
