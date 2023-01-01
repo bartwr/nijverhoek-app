@@ -80,18 +80,38 @@ export const Container = ({
         Container-icon
         absolute top-0 right-0 bottom-0 left-0 flex flex-col text-center justify-center landscape:text-xs portrait:text-base
         ${containerStatus.containerSize != 40 ? 'portrait:-ml-1' : ''}
-      `}>
+      `} style={{
+          textShadow: '0px -1px 0.25px #fff'
+      }}>
         {getIcon(containerStatus.containerType)}
       </div>}
       {emoticon && <div className={`
         absolute top-0 right-0 bottom-0 left-0 flex flex-col text-center justify-center landscape:text-xs portrait:text-base
         ${containerStatus.containerSize != 40 ? 'portrait:-ml-1' : ''}
       `}>
-        <span className={`rounded-full bg-black portrait:${containerStatus.containerSize === 40 ? 'w-10' : 'w-8'} portrait:${containerStatus.containerSize === 40 ? 'h-10' : 'h-8'} landscape:${containerStatus.containerSize === 40 ? 'w-7' : 'w-6'} landscape:${containerStatus.containerSize === 40 ? 'h-7' : 'h-6'} mx-auto flex justify-center flex-col`} style={{
-          backgroundColor: '#ffeb3b',
-          border: `solid #000 ${containerStatus.containerSize === 40 ? '4px' : '2px'}`
+        <span className={`
+          rounded-full bg-black
+          ${containerStatus.containerSize === 40 ? 'portrait:w-10' : 'portrait:w-8'} ${containerStatus.containerSize === 40 ? 'portrait:h-10' : 'portrait:h-8'}
+          ${containerStatus.containerSize === 40 ? 'landscape:w-7' : 'landscape:w-6'} ${containerStatus.containerSize === 40 ? 'landscape:h-7' : 'landscape:jh-6'}
+          mx-auto flex justify-center flex-col
+          relative
+        `} style={{
+          backgroundColor: '#4300ff',
+          border: `solid #000 ${containerStatus.containerSize === 40 ? '4px' : '2px'}`,
+          textShadow: '0px -1px 0.25px #fff'
         }}>
           {emoticon}
+          <div className="
+            absolute
+            text-md
+          " style={{
+            top: '-4.1vh',
+            left: '-8px',
+            color: '#4300ff',
+            textShadow: '0px -1px 1px white'
+          }}>
+            {containerStatus.containerSize || '20'}m3
+          </div>
         </span>
       </div>}
       <motion.svg

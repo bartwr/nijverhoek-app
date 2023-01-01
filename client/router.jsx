@@ -60,6 +60,22 @@ FlowRouter.route('/sloop/container-pickup', {
   }
 });
 
+FlowRouter.route('/renewi', {
+  name: 'renewi',
+  async action(params, queryParams) {
+    const { Renewi } = await import('/imports/components/Renewi/Renewi')
+    renderApp(<Renewi />);
+  }
+});
+
+FlowRouter.route('/sloop/container-pickup', {
+  name: 'sloop-container-pickup',
+  async action(params, queryParams) {
+    const { ContainerPickup } = await import('/imports/components/ContainerPickup/ContainerPickup')
+    renderApp(<ContainerPickup />);
+  }
+});
+
 FlowRouter.route('/sloop/container-pickup/admin', {
   name: 'sloop-container-pickup-admin',
   async action(params, queryParams) {

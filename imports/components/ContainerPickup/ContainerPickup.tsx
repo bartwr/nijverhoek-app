@@ -11,6 +11,7 @@ import {Button} from '../Button/Button.tsx';
 import {LayoutWithLogo} from '../LayoutWithLogo/LayoutWithLogo.tsx';
 import {Container} from './Container';
 import {ContainerEdit} from './ContainerEdit.tsx';
+import {Legend} from './Legend.tsx';
 import ProgressSvg from '../Progress/ProgressSvg';
 
 // Models
@@ -325,7 +326,7 @@ export const ContainerPickup = () => {
           <img src="/images/components/ContainerPickup/theme-elements/fireworks/fireworks.svg" alt="Vuurwerk" style={{width: '5vh'}} />
         </div>}
 
-        {(moment().format('MM-DD') == '01-01') && <div className="absolute" style={{
+        {(moment().format('MM-DD') == '01-01' || moment().format('MM-DD') == '01-02') && <div className="absolute" style={{
           top: '77.2vh',
           left: '27.1%',
         }}>
@@ -456,12 +457,7 @@ export const ContainerPickup = () => {
 
     </motion.div>
 
-    {/*LEGEND*/}
-    <div className="fixed z-2 bottom-0 left-0 w-full overflow-x-auto">
-      <img src="/images/components/ContainerPickup/legend.png" alt="Container map"
-        className="ContainerPickup-map w-full bg-white p-1 block"
-      />
-    </div>
+    <Legend />
 
     <div className="relative z-10">
 
