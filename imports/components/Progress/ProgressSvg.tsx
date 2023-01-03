@@ -6,6 +6,26 @@ function Icon({
    data,
    width
 }) {
+  const renderHouseNumber = ({
+    number, x, y, position
+  }) => {
+    return (
+      <tspan
+        x={getAgreedOnValue(number) ? x-7 : x}
+        y={getAgreedOnValue(number) ? (y+(position === 'top' ? 7 : -7)) : y}
+        style={{}}
+        strokeWidth="2"
+        fontFamily="Baloo Bhai"
+        fontStretch="normal"
+        fontStyle="normal"
+        fontVariant="normal"
+        fontWeight="normal"
+      >
+        {getAgreedOnValue(number) ? '✔️' : number}
+      </tspan>
+    )
+  }
+
   const getPercentageDone = (houseNumber) => {
     if(! data) return 0;
 
@@ -800,19 +820,7 @@ function Icon({
           y="285.346"
           fontFamily="sans-serif"
         >
-          <tspan
-            x="145.476"
-            y="285.346"
-            style={{}}
-            strokeWidth="2"
-            fontFamily="Baloo Bhai"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-          >
-            2
-          </tspan>
+          {renderHouseNumber({ number: 2, x: 145.476, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -821,19 +829,7 @@ function Icon({
           y="285.346"
           fontFamily="sans-serif"
         >
-          <tspan
-            x="195.476"
-            y="285.346"
-            style={{}}
-            strokeWidth="2"
-            fontFamily="Baloo Bhai"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-          >
-            3
-          </tspan>
+          {renderHouseNumber({ number: 3, x: 195.476, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -842,19 +838,7 @@ function Icon({
           y="285.346"
           fontFamily="sans-serif"
         >
-          <tspan
-            x="243.476"
-            y="285.346"
-            style={{}}
-            strokeWidth="2"
-            fontFamily="Baloo Bhai"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-          >
-            4
-          </tspan>
+          {renderHouseNumber({ number: 4, x: 243.476, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -863,19 +847,7 @@ function Icon({
           y="285.346"
           fontFamily="sans-serif"
         >
-          <tspan
-            x="293.476"
-            y="285.346"
-            style={{}}
-            strokeWidth="2"
-            fontFamily="Baloo Bhai"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-          >
-            5
-          </tspan>
+          {renderHouseNumber({ number: 5, x: 293.476, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -884,19 +856,7 @@ function Icon({
           y="285.346"
           fontFamily="sans-serif"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{}}
-            strokeWidth="2"
-            fontFamily="Baloo Bhai"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-          >
-            6
-          </tspan>
+          {renderHouseNumber({ number: 6, x: 341.476, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -957,68 +917,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            7
-          </tspan>
+          {renderHouseNumber({ number: 7, x: 341.476, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -1077,68 +976,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            8
-          </tspan>
+          {renderHouseNumber({ number: 8, x: 341.476, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -1197,68 +1035,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            9
-          </tspan>
+          {renderHouseNumber({ number: 9, x: 341.476, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -1317,68 +1094,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="336"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            12
-          </tspan>
+          {renderHouseNumber({ number: 12, x: 336, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -1437,68 +1153,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="336"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            13
-          </tspan>
+          {renderHouseNumber({ number: 13, x: 336, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -1557,68 +1212,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="336"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            14
-          </tspan>
+          {renderHouseNumber({ number: 14, x: 336, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -1677,68 +1271,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="336"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            15
-          </tspan>
+          {renderHouseNumber({ number: 15, x: 336, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -1797,68 +1330,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="338"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            16
-          </tspan>
+          {renderHouseNumber({ number: 16, x: 338, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -1917,68 +1389,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            17
-          </tspan>
+          {renderHouseNumber({ number: 17, x: 341, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -2037,68 +1448,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="336"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            18
-          </tspan>
+          {renderHouseNumber({ number: 18, x: 336, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -2157,68 +1507,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="338"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            19
-          </tspan>
+          {renderHouseNumber({ number: 19, x: 338, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -2277,68 +1566,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="336"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            20
-          </tspan>
+          {renderHouseNumber({ number: 20, x: 336, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -2397,68 +1625,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="340"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            21
-          </tspan>
+          {renderHouseNumber({ number: 21, x: 340, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -2517,68 +1684,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            22
-          </tspan>
+          {renderHouseNumber({ number: 22, x: 341.476, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -2637,68 +1743,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            23
-          </tspan>
+          {renderHouseNumber({ number: 23, x: 341.476, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -2757,68 +1802,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            24
-          </tspan>
+          {renderHouseNumber({ number: 24, x: 341.476, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -2877,68 +1861,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            25
-          </tspan>
+          {renderHouseNumber({ number: 25, x: 341.476, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -2997,68 +1920,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="336"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            26
-          </tspan>
+          {renderHouseNumber({ number: 26, x: 336, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -3117,68 +1979,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            27
-          </tspan>
+          {renderHouseNumber({ number: 27, x: 341.476, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -3237,68 +2038,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            28
-          </tspan>
+          {renderHouseNumber({ number: 28, x: 341.476, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -3357,68 +2097,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            29
-          </tspan>
+          {renderHouseNumber({ number: 29, x: 341.476, y: 285.346, position: 'top' })}
         </text>
         <text
           xmlSpace="preserve"
@@ -3477,68 +2156,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            30
-          </tspan>
+          {renderHouseNumber({ number: 30, x: 341.476, y: 285.346, position: 'top' })}
         </text>
         <text
           xmlSpace="preserve"
@@ -3597,68 +2215,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            31
-          </tspan>
+          {renderHouseNumber({ number: 31, x: 341.476, y: 285.346, position: 'top' })}
         </text>
         <text
           xmlSpace="preserve"
@@ -3717,68 +2274,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            32
-          </tspan>
+          {renderHouseNumber({ number: 32, x: 341.476, y: 285.346, position: 'top' })}
         </text>
         <text
           xmlSpace="preserve"
@@ -3839,68 +2335,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            11
-          </tspan>
+          {renderHouseNumber({ number: 11, x: 341.476, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
@@ -3961,68 +2396,7 @@ function Icon({
           vectorEffect="none"
           writingMode="lr-tb"
         >
-          <tspan
-            x="341.476"
-            y="285.346"
-            style={{
-              lineHeight: "1.25",
-              InkscapeFontSpecification: "'Baloo Bhai'",
-              fontVariantLigatures: "normal",
-              fontVariantPosition: "normal",
-              fontVariantCaps: "normal",
-              fontVariantNumeric: "normal",
-              fontVariantAlternates: "normal",
-              fontVariantEastAsian: "normal",
-              fontFeatureSettings: "normal",
-              fontVariationSettings: "normal",
-              WebkitTextIndent: "0",
-              textIndent: "0",
-              WebkitTextAlign: "start",
-              textAlign: "start",
-              WebkitTextDecorationLine: "none",
-              textDecorationLine: "none",
-              WebkitTextDecorationStyle: "solid",
-              textDecorationStyle: "solid",
-              WebkitTextDecorationColor: "#000000",
-              textDecorationColor: "#000000",
-              WebkitTextTransform: "none",
-              textTransform: "none",
-              WebkitTextOrientation: "mixed",
-              textOrientation: "mixed",
-              whiteSpace: "normal",
-              shapePadding: "0",
-              shapeMargin: "0",
-              inlineSize: "0",
-              InkscapeStroke: "none",
-            }}
-            fill="#000"
-            fillOpacity="1"
-            strokeDasharray="none"
-            strokeDashoffset="0"
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeMiterlimit="4"
-            strokeOpacity="1"
-            strokeWidth="2"
-            baselineShift="baseline"
-            direction="ltr"
-            dominantBaseline="auto"
-            fontFamily="Baloo Bhai"
-            fontSize="26.666"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-            letterSpacing="0"
-            stopColor="#000"
-            stopOpacity="1"
-            textAnchor="start"
-            vectorEffect="none"
-            wordSpacing="0"
-            writingMode="lr-tb"
-          >
-            10
-          </tspan>
+          {renderHouseNumber({ number: 10, x: 341.476, y: 285.346 })}
         </text>
       </g>
     </svg>

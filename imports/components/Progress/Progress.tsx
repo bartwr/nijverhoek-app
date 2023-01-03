@@ -159,7 +159,7 @@ export const Progress = () => {
       if(! isAllowedToShareProgress) return;
       setShowOverlay(true);
     }}>
-      De Nijverhoek is voor {Math.round(totalProgress)}% gesloopt.<br />Hoe ver ben jij? Klik hier:
+      De Nijverhoek is voor {Math.round(totalProgress)}% gesloopt
     </div>
     <div className={`${isAllowedToShareProgress ? 'cursor-pointer' : ''} overflow-x-auto overflow-y-hidden -mx-6`} onClick={() => {
       if(! isAllowedToShareProgress) return;
