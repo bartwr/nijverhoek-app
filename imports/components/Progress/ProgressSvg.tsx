@@ -9,10 +9,11 @@ function Icon({
   const renderHouseNumber = ({
     number, x, y, position
   }) => {
+    const _100pct = false;// getAgreedOnValue(number);
     return (
       <tspan
-        x={getAgreedOnValue(number) ? x-7 : x}
-        y={getAgreedOnValue(number) ? (y+(position === 'top' ? 7 : -7)) : y}
+        x={_100pct ? x-5 : x}
+        y={_100pct ? (y+(position === 'top' ? 7 : -7)) : y}
         style={{}}
         strokeWidth="2"
         fontFamily="Baloo Bhai"
@@ -21,7 +22,7 @@ function Icon({
         fontVariant="normal"
         fontWeight="normal"
       >
-        {getAgreedOnValue(number) ? '✔️' : number}
+        {_100pct ? '✔️' : number}
       </tspan>
     )
   }
@@ -799,19 +800,7 @@ function Icon({
           y="285.346"
           fontFamily="sans-serif"
         >
-          <tspan
-            x="98.067"
-            y="285.346"
-            style={{}}
-            strokeWidth="2"
-            fontFamily="Baloo Bhai"
-            fontStretch="normal"
-            fontStyle="normal"
-            fontVariant="normal"
-            fontWeight="normal"
-          >
-            1
-          </tspan>
+          {renderHouseNumber({ number: 1, x: 98.067, y: 285.346 })}
         </text>
         <text
           xmlSpace="preserve"
