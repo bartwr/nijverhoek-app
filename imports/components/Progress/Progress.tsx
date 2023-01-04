@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import { useTracker } from 'meteor/react-meteor-data';
 import moment from 'moment';
+import JSConfetti from 'js-confetti'
 
 import {Title} from '../Title/Title.tsx';
 import {Select} from '../Form/Select';
@@ -18,6 +19,32 @@ import ProgressSvg from './ProgressSvg';
 import { Progress as ProgressModel } from '/imports/models/Progress';
 
 const myHouseNumber = parseInt(localStorage.getItem('SLOOPHOEK__houseNumber'));
+
+const jsConfetti = new JSConfetti()
+const showConfetti = (times: number) => { 
+  if(! times) return;
+
+  const celebrate = () => {
+    jsConfetti.addConfetti()
+    jsConfetti.addConfetti({
+      emojis: ['⚒️', '🪵', '🌴', '◻️'],
+      emojiSize: 30,
+      confettiNumber: 100,
+    });
+  }
+
+  celebrate();
+  let counter = 1;
+
+  let TO = setInterval(() => {
+    if(counter >= times) {
+      clearTimeout(TO);
+      return;
+    }
+    celebrate();
+    counter++;
+  }, 1000);
+}
 
 const ProgressForm = ({
   onClose
@@ -114,6 +141,7 @@ const ProgressForm = ({
 
 export const Progress = () => {
   const [showOverlay, setShowOverlay] = useState(false);
+  const [numberOfDones, setNumberOfDones] = useState(0);
 
   const { allProgress, isLoading } = useTracker(() => {
     const subscription = Meteor.subscribe('progress.all');
@@ -127,6 +155,28 @@ export const Progress = () => {
       isLoading: !subscription.ready(),
     }
   }, []);
+
+  // Show confetti if a new household becomes 100% done 
+  useEffect(() => {
+    let counter = 0;
+    allProgress.forEach(x => {
+      if(x.agreedOn100pctBySloopteam) {
+        counter += 1;
+      }
+    });
+    // Show a lot of confetti if everyone is done (30 households)
+    if(numberOfDones > 0 && counter > numberOfDones && counter === 30) {
+      showConfetti(5);
+    }
+    // Show confetti 1 time if a new household is done
+    else if(numberOfDones > 0 && counter > numberOfDones) {
+      showConfetti(1);
+    }
+    setNumberOfDones(counter);
+  }, [
+    allProgress,
+    numberOfDones
+  ])
 
   const calculateTotalProgress = (allProgress) => {
     if(! allProgress) return 0;
