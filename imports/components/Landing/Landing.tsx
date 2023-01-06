@@ -78,7 +78,7 @@ export const Landing = () => {
        </div>
     </div>
 
-    {isVerified && <div className="my-4 mb-8">
+    {<div className="my-4 mb-8">
       <Title>
         Container vol?
       </Title>
@@ -88,7 +88,7 @@ export const Landing = () => {
       </div>
     </div>}
 
-    {isVerified && <div className="my-4 mb-8">
+    {<div className="my-4 mb-8">
       <Title>
         Voortgang
       </Title>
