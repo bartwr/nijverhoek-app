@@ -100,28 +100,26 @@ export const Container = ({
           border: `solid #000 ${containerStatus.containerSize === 40 ? '2px' : '2px'}`,
           textShadow: '1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff, 0.5px 0.5px #fff, -0.5px -0.5px #fff, 0.5px -0.5px #fff, -0.5px 0.5px #fff'
         }}>
-
           {emoticon}
-
-          {document.location.pathname === '/renewi' && <div className="
-            absolute
-            text-xs
-          " style={{
-            top: (containerStatus.containerSize && containerStatus.containerSize === 40 ? '7.6vh' : '7.37vh'),
-            left: '-6px',
-            color: '#4300ff',
-            background: '#fff',
-            borderLeft: 'solid 1px #4300ff',
-            // borderRight: 'solid 1px #4300ff',
-            padding: '0 2px'
-            zIndex: 20,
-            whiteSpace: 'nowrap'
-          }}>
-            <span className="inline-block">{containerStatus.containerSize || '20'}</span><span className="inline-block" style={{marginLeft: '0.5px', fontSize: '10px'}}>m3</span>
-          </div>}
-
         </span>
       </div>}
+      {(document.location.pathname === '/renewi' && containerStatus && containerStatus.status !== 'weggehaald') && <div className="
+        absolute
+        text-xs
+      " style={{
+        top: (containerStatus.containerSize && containerStatus.containerSize === 40 ? '9.6vh' : '9.62vh'),
+        left: '1vh',
+        color: '#4300ff',
+        background: '#fff',
+        borderLeft: 'solid 1px #4300ff',
+        // borderRight: 'solid 1px #4300ff',
+        padding: '0 2px'
+        zIndex: 20,
+        whiteSpace: 'nowrap'
+      }}>
+        <span className="inline-block">{containerStatus.containerSize || '20'}</span><span className="inline-block" style={{marginLeft: '0.5px', fontSize: '10px'}}>m3</span>
+      </div>}
+
       <motion.svg
         animate={{ opacity: opacity }}
         transition={{ delay: 0.8 }}
