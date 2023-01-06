@@ -170,7 +170,7 @@ export const Progress = () => {
     }
     // Show confetti 1 time if a new household is done
     else if(numberOfDones > 0 && counter > numberOfDones) {
-      showConfetti(1);
+      // showConfetti(1);
     }
     setNumberOfDones(counter);
   }, [
