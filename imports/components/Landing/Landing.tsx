@@ -26,7 +26,7 @@ if(LS_houseNumberCheckInCounters) {
   houseNumberCheckInCounters = JSON.parse(LS_houseNumberCheckInCounters);
 }
 
-const isVerified = houseNumberCheckInCounters && houseNumberCheckInCounters[houseNumber] && houseNumberCheckInCounters[houseNumber] >= 2;
+const isVerified = houseNumberCheckInCounters && houseNumberCheckInCounters[houseNumber] && houseNumberCheckInCounters[houseNumber] >= 1;
 
 export const Landing = () => {
   useEffect(x => {

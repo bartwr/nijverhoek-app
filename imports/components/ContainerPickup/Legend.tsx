@@ -21,7 +21,9 @@ const LegendItem = ({
 
 export const Legend = () => {
   return (
-    <div className="fixed z-2 bottom-0 left-0 w-full overflow-x-auto">
+    <div className="fixed z-2 bottom-0 left-0 w-full overflow-x-auto" style={{
+      bottom: document.location.pathname === '/renewi' ? '10px' : 0
+    }}>
       <div className="Legend-inner bg-white max-w-fit mx-auto rounded-t-full rounded-8xl">
         <img src="/images/components/ContainerPickup/legend.png" alt="Container map"
           className="ContainerPickup-map w-full bg-white p-1 block mx-auto"
