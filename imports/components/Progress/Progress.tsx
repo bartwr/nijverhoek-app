@@ -10,6 +10,7 @@ import {Title} from '../Title/Title.tsx';
 import {Select} from '../Form/Select';
 import {Button} from '../Button/Button.tsx';
 import {LayoutWithLogo} from '../LayoutWithLogo/LayoutWithLogo.tsx';
+import {ProgressDone} from './ProgressDone.tsx';
 
 import {Overlay} from '../Overlay/Overlay.tsx';
 
@@ -190,6 +191,7 @@ export const Progress = () => {
   }
 
   const houseNumber = localStorage.getItem('SLOOPHOEK__houseNumber');
+  const didSeeAni = localStorage.getItem('SLOOPHOEK__didSee100pctDoneAni');
 
   const LS_houseNumberCheckInCounters = localStorage.getItem('SLOOPHOEK__houseNumberCheckInCounters');
   let houseNumberCheckInCounters = [];
@@ -202,6 +204,7 @@ export const Progress = () => {
   const totalProgress = calculateTotalProgress(allProgress);
 
   return <>
+    {(! didSeeAni && numberOfDones === 30) ? <ProgressDone /> : ''}
     {showOverlay && <ProgressForm onClose={() => {
       setShowOverlay(false);
     }} />}
@@ -209,7 +212,23 @@ export const Progress = () => {
       if(! isAllowedToShareProgress) return;
       setShowOverlay(true);
     }}>
-      De Nijverhoek is voor {Math.round(totalProgress)}% gesloopt
+      {! didSeeAni ? <div>
+        De Nijverhoek is voor {Math.round(totalProgress)}% gesloopt
+      </div> : <div>
+        De Nijverhoek is voor <span className="
+          inline-block
+          px-1
+          text-white
+          cursor-pointer
+        " style={{backgroundColor: '#4a8bf2'}}
+        onClick={() => {
+          localStorage.removeItem('SLOOPHOEK__didSee100pctDoneAni');
+          document.location = '/';
+        }}
+        >
+          {Math.round(totalProgress)}%
+        </span> gesloopt
+      </div>}
     </div>
     <div className={`${isAllowedToShareProgress ? 'cursor-pointer' : ''} overflow-x-auto overflow-y-hidden -mx-6`} onClick={() => {
       if(! isAllowedToShareProgress) return;

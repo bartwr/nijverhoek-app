@@ -80,21 +80,21 @@ export const Landing = () => {
 
     {<div className="my-4 mb-8">
       <Title>
-        Container vol?
-      </Title>
-
-      <div onClick={() => FlowRouter.go('sloop-container-pickup')}>
-        <img src="/images/components/ContainerPickup/container-pickup.jpg" alt="Pickup container" className="cursor-pointer" />
-      </div>
-    </div>}
-
-    {<div className="my-4 mb-8">
-      <Title>
         Voortgang
       </Title>
 
       <div className="py-4">
         <Progress />
+      </div>
+    </div>}
+
+    {<div className="my-4 mb-8">
+      <Title>
+        Container vol?
+      </Title>
+
+      <div onClick={() => FlowRouter.go('sloop-container-pickup')}>
+        <img src="/images/components/ContainerPickup/container-pickup.jpg" alt="Pickup container" className="cursor-pointer" />
       </div>
     </div>}
 
