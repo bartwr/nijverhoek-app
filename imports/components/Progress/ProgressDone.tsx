@@ -20,8 +20,10 @@ export const ProgressDone = () => {
     setTimeout(() => {
       localStorage.setItem('SLOOPHOEK__didSee100pctDoneAni', 'true');
       setDoesRedirect(true);
-      document.location = '/';
-    }, 4800);
+      setTimeout(() => {
+        document.location = '/';
+      }, 500);
+    }, 4600);
   }, [])
 
   return <div className="

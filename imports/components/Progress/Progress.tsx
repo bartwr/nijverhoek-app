@@ -208,10 +208,7 @@ export const Progress = () => {
     {showOverlay && <ProgressForm onClose={() => {
       setShowOverlay(false);
     }} />}
-    <div className="-mt-2 mb-4 text-sm" onClick={() => {
-      if(! isAllowedToShareProgress) return;
-      setShowOverlay(true);
-    }}>
+    <div className="-mt-2 mb-4 text-sm">
       {! didSeeAni ? <div>
         De Nijverhoek is voor {Math.round(totalProgress)}% gesloopt
       </div> : <div>
