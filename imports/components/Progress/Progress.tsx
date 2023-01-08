@@ -144,6 +144,17 @@ export const Progress = () => {
   const [showOverlay, setShowOverlay] = useState(false);
   const [numberOfDones, setNumberOfDones] = useState(0);
 
+  const houseNumber = localStorage.getItem('SLOOPHOEK__houseNumber');
+  const didSeeAni = localStorage.getItem('SLOOPHOEK__didSee100pctDoneAni');
+
+  const LS_houseNumberCheckInCounters = localStorage.getItem('SLOOPHOEK__houseNumberCheckInCounters');
+  let houseNumberCheckInCounters = [];
+  if(LS_houseNumberCheckInCounters) {
+    houseNumberCheckInCounters = JSON.parse(LS_houseNumberCheckInCounters);
+  }
+
+  const isAllowedToShareProgress = houseNumberCheckInCounters && houseNumberCheckInCounters[houseNumber] && houseNumberCheckInCounters[houseNumber] >= 2;
+
   const { allProgress, isLoading } = useTracker(() => {
     const subscription = Meteor.subscribe('progress.all');
 
@@ -165,9 +176,9 @@ export const Progress = () => {
         counter += 1;
       }
     });
-    // Show a lot of confetti if everyone is done (30 households)
-    if(numberOfDones > 0 && counter > numberOfDones && counter === 30) {
-      showConfetti(5);
+    // Show confetti if everyone is done (30 households)
+    if(! didSeeAni && counter > numberOfDones && counter === 30) {
+      showConfetti(1);
     }
     // Show confetti 1 time if a new household is done
     else if(numberOfDones > 0 && counter > numberOfDones) {
@@ -189,17 +200,6 @@ export const Progress = () => {
     console.log('PROGRESS: Number of households', countEntries);
     return sumTotalPercentage / countEntries;
   }
-
-  const houseNumber = localStorage.getItem('SLOOPHOEK__houseNumber');
-  const didSeeAni = localStorage.getItem('SLOOPHOEK__didSee100pctDoneAni');
-
-  const LS_houseNumberCheckInCounters = localStorage.getItem('SLOOPHOEK__houseNumberCheckInCounters');
-  let houseNumberCheckInCounters = [];
-  if(LS_houseNumberCheckInCounters) {
-    houseNumberCheckInCounters = JSON.parse(LS_houseNumberCheckInCounters);
-  }
-
-  const isAllowedToShareProgress = houseNumberCheckInCounters && houseNumberCheckInCounters[houseNumber] && houseNumberCheckInCounters[houseNumber] >= 2;
 
   const totalProgress = calculateTotalProgress(allProgress);
 
