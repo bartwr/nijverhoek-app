@@ -1,4 +1,4 @@
-import { Meteor } from 'meteor/meteor';
+import { Ieteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import React, {useEffect, useState} from 'react';
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
@@ -44,9 +44,9 @@ export const Landing = () => {
         Wie is er aanwezig?
       </Title>
 
-      {activeSessions && activeSessions.length > 0 && <div className="py-6">
+      {(true || (activeSessions && activeSessions.length > 0)) && <div className="py-6">
         <P>
-          In deze kavels zijn er mensen aan het slopen:
+          Hier zijn mensen aan het werk:
         </P>
       </div>}
 
