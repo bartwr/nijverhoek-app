@@ -210,7 +210,7 @@ export const Progress = () => {
     }} />}
     <div className="-mt-2 mb-4 text-sm">
       {! didSeeAni ? <div>
-        De Nijverhoek is voor {Math.round(totalProgress)}% gesloopt
+        De Nijverhoek is voor {(totalProgress && ! isNaN(totalProgress)) ? Math.round(totalProgress) : ''}% gesloopt
       </div> : <div>
         De Nijverhoek is voor <span className="
           inline-block
