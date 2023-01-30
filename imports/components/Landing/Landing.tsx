@@ -53,6 +53,10 @@ export const Landing = () => {
       <div className="
         flex justify-center flex-wrap
       ">
+        <Household key={'B'}>B</Household>
+        <Household key={'I'}>I</Household>
+        <Household key={'K'}>K</Household>
+
         {activeSessions.map(x => {
           return <Household key={x._id}>
             {x.memo}
