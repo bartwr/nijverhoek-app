@@ -1,7 +1,5 @@
 window.onload = (event) => {
 
-	console.log('go for it')
-
 	// Create fragment
 	// source: https://stackoverflow.com/a/814649
 	const create = (htmlStr) => {
@@ -21,12 +19,12 @@ window.onload = (event) => {
 			font-family: sans-serif;
 			font-weight: ${document.location.href.indexOf(url) > -1 ? 'bold' : 'normal'};
 			margin: 0 10px;
-			padding: 5px 0;
+			padding: 3px 0;
 			display: inline-block;
 		">${title}</a>`
 	}
 
-	const fragment = create(`<nav align="center">
+	const fragment = create(`<nav align="center" style="z-index:101; position:relative;">
 		${renderNavItem('https://kennisbank.nijverhoekrotterdam.nl/', 'Kennisbank')}
 		${renderNavItem('https://feed.nijverhoek.nl/', 'Feed')}
 		${renderNavItem('https://app.nijverhoek.nl/', 'Sloop')}
